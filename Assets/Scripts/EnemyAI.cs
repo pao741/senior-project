@@ -120,10 +120,11 @@ public class EnemyAI : MonoBehaviour
         }
         
         setAnimation(force);
-        float far = Vector3.Distance(target.position, enemyGFX.position);
-        /*Debug.Log(takingDamage);*/
+        float far = Vector3.Distance(target.position, rb.position);
+        /*Debug.Log(far);*/
         if (far <= attackRange && !takingDamage)
         {
+            /*Debug.Log(far);*/
             // Calling attack animation
             animator.Play("Enemy1_attack");
         }
@@ -241,6 +242,8 @@ public class EnemyAI : MonoBehaviour
         Debug.Log("It fucking dies");
         GetComponent<Collider2D>().enabled = false;
         healthBar.Destroy(); //Destroy(healthBar);
+        gameObject.tag = "Corpse";
+
         Destroy(gameObject, 10f);
     }
 
