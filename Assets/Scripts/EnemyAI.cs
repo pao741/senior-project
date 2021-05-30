@@ -151,7 +151,7 @@ public class EnemyAI : MonoBehaviour
             //float timer = 0;
             if (rb != null)
             {
-                Debug.Log("Hit");
+                /*Debug.Log("Hit");*/
                 disableMovement = true;
                 /*Vector2 difference = (other.transform.position - rb.transform.position).normalized;
                 Debug.Log(difference);
@@ -170,7 +170,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                Debug.Log("is null");
+                /*Debug.Log("is null");*/
             }
         }
         if (other.gameObject.tag == "Portal" && isAttacking)
@@ -178,13 +178,13 @@ public class EnemyAI : MonoBehaviour
             if (other != null)
             {
                 // do something
-                Debug.Log("Attacking portal");
+                /*Debug.Log("Attacking portal");*/
                 Portal portal = other.gameObject.GetComponent<Portal>();
                 portal.TakeDamage(40);
             }
             else
             {
-                Debug.Log("is null");
+                /*Debug.Log("is null");*/
             }
         }
 

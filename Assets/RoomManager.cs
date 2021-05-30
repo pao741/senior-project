@@ -6,13 +6,20 @@ public class RoomManager : MonoBehaviour
 {
     GameObject[] enemies;
 
+    public Portal portal;
+
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
+    public bool roomCleared = false;
+
+
+    private int numWaves = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        /*SpawnFromAllPoints();*/
+        //SpawnFromAllPoints();
+        numWaves--;
     }
 
     // Update is called once per frame
@@ -33,9 +40,21 @@ public class RoomManager : MonoBehaviour
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if(enemies.Length == 0)
+        if(enemies.Length == 0 && numWaves > 0)
+        {
+            // spawn more enemy
+            Debug.Log("No enemy left");
+            SpawnFromAllPoints();
+            numWaves--;
+        }
+
+        if(enemies.Length == 0 && numWaves == 0)
         {
             Debug.Log("No enemy left");
+            Debug.Log("Enabling portal");
+            roomCleared = true;
+            portal.SetInteractable(true);
+            // activate portal
         }
 
     }
