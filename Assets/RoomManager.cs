@@ -12,7 +12,7 @@ public class RoomManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*SpawnFromAllPoints();*/
     }
 
     // Update is called once per frame
@@ -26,6 +26,11 @@ public class RoomManager : MonoBehaviour
             Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoints].position, transform.rotation);
         }
 
+        if (Input.GetKeyDown(KeyCode.T)) // input to summon enemy
+        {
+            SpawnFromAllPoints();
+        }
+
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if(enemies.Length == 0)
@@ -33,5 +38,14 @@ public class RoomManager : MonoBehaviour
             Debug.Log("No enemy left");
         }
 
+    }
+
+    void SpawnFromAllPoints()
+    {
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            int randEnemy = Random.Range(0, enemyPrefabs.Length);
+            Instantiate(enemyPrefabs[randEnemy], spawnPoints[i].position, transform.rotation);
+        }
     }
 }
