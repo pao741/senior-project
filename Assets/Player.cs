@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public int maxHealth = 1000;
 
     public HealthBar healthBar;
+    public CameraShake cameraShake;
+
     bool invulnerable = false;
 
     // Start is called before the first frame update
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour
         Debug.Log("Player taking damage");
         Debug.Log(damage);
         healthBar.SetHealth(currentHealth); // set health bar to current health
+        //StartCoroutine(cameraShake.Shake(.15f,.4f));
+        CinemachineShake.Instance.ShakeCamera(0.4f,.1f);
 
         if (currentHealth <= 0)
         {
