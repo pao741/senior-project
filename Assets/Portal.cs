@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Portal : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Portal : MonoBehaviour
     public float interactingRange = 1f;
 
     public GameObject interactingMessage;
+    public TextMeshProUGUI actionText;
     private string message = "use the portal";
 
     private bool interactable = false;
@@ -40,8 +42,7 @@ public class Portal : MonoBehaviour
             {
                 interactingMessage.SetActive(true);
 
-                /*Text text = interactingMessage.GetComponent<Text>();
-                text.text = message;*/
+                actionText.text = message;
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.LoadScene(0);

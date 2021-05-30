@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public static bool isDead;
 
     bool invulnerable = false;
-    float damageCooldownTimer = 1.5f;
+    float damageCooldownTimer = 2f;
     float nextDamageTime = 0f;
 
     public GameObject DeathMessage;
