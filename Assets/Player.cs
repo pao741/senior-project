@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         Debug.Log(damage);
         healthBar.SetHealth(currentHealth); // set health bar to current health
         //StartCoroutine(cameraShake.Shake(.15f,.4f));
-        CinemachineShake.Instance.ShakeCamera(0.4f,.1f);
+        CinemachineShake.Instance.ShakeCamera(0.5f,.15f);
 
         if (currentHealth <= 0)
         {
