@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
@@ -38,6 +39,9 @@ public class Portal : MonoBehaviour
             if (distanceFromPlayer <= interactingRange)
             {
                 interactingMessage.SetActive(true);
+
+                /*Text text = interactingMessage.GetComponent<Text>();
+                text.text = message;*/
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.LoadScene(0);

@@ -199,8 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcbf0289f6e55e489742cba96e22799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
   healthBar: {fileID: 0}
+  cameraShake: {fileID: 0}
+  DeathMessage: {fileID: 0}
 --- !u!1 &6615614523056293757
 GameObject:
   m_ObjectHideFlags: 0

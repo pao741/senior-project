@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+    // Currently this script is unused
     public IEnumerator Shake (float duration, float magnitude)
     {
         Vector3 originalPos = transform.localPosition;

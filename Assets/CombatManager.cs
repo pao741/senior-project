@@ -31,7 +31,7 @@ public class CombatManager : MonoBehaviour
             clickCount = 0;
         }
 
-        if (Input.GetButtonDown("Fire1") && !PauseMenu.isPaused)
+        if (Input.GetButtonDown("Fire1") && !PauseMenu.isPaused && !Player.isDead)
         {
             
             clickCount++;
