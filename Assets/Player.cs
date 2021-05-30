@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -26,7 +27,8 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log("Player taking damage");
-        //healthBar.SetHealth(currentHealth); // set health bar to current health
+        Debug.Log(damage);
+        healthBar.SetHealth(currentHealth); // set health bar to current health
 
         if (currentHealth <= 0)
         {
