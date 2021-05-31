@@ -7931,11 +7931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1354068336 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4484114901334885542, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
-  m_PrefabInstance: {fileID: 4484114902149985750}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455957033
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,7 +8606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700305826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24255353, y: 0.51521176, z: -11.458358}
+  m_LocalPosition: {x: -0.24255353, y: 0.51521176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 66758413}
@@ -9225,10 +9220,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_modified
       objectReference: {fileID: 0}
-    - target: {fileID: 1789675195319993147, guid: aa69bfb67fae4a147bef6cdaec52f159, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1354068336}
     - target: {fileID: 1789675195319993150, guid: aa69bfb67fae4a147bef6cdaec52f159, type: 3}
       propertyPath: m_RootOrder
       value: 8
