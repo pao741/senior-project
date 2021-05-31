@@ -157,36 +157,6 @@ public class EnemyAI : MonoBehaviour
 
             }
         }
-        /*if (other.gameObject.tag == "Player" && isAttacking)
-        {
-            //float timer = 0;
-            if (other != null)
-            {
-                // do something
-                Player player = other.gameObject.GetComponent<Player>();
-                //player.TakeDamage(40);
-            }
-            else
-            {
-                *//*Debug.Log("is null");*//*
-            }
-        }
-        if (other.gameObject.tag == "Portal" && isAttacking)
-        {
-            if (other != null)
-            {
-                // do something
-                *//*Debug.Log("Attacking portal");*//*
-                Portal portal = other.gameObject.GetComponent<Portal>();
-                portal.TakeDamage(40);
-            }
-            else
-            {
-                *//*Debug.Log("is null");*//*
-            }
-        }
-
-        disableMovement = false;*/
 
     }
 
@@ -196,16 +166,10 @@ public class EnemyAI : MonoBehaviour
         float knockbackPower = 1000f;
 
         disableMovement = true;
-        /*while (knockbackDuration > timer)
-        {
-            timer += Time.deltaTime;
-            Vector2 difference = (from - rb.transform.position).normalized;
-            rb.AddForce(-difference * knockbackPower);
-        }*/
+
         Vector2 difference = (from - rb.transform.position).normalized;
         rb.AddForce(-difference * knockbackPower);
-        /*rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;*/
+
         disableMovement = false;
     }
 
