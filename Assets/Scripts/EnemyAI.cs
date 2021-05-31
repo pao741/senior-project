@@ -32,7 +32,6 @@ public class EnemyAI : MonoBehaviour
 
     float takingDamageTimer = 0;
     float targetTimer = 0;
-    bool prevAttacking;
 
     Path path;
     int currentWaypoint = 0;
@@ -125,7 +124,6 @@ public class EnemyAI : MonoBehaviour
         /*Debug.Log(far);*/
         if (far <= attackRange && !takingDamage)
         {
-            /*Debug.Log(far);*/
             // Calling attack animation
             animator.Play("Enemy1_attack");
         }
@@ -146,7 +144,6 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        prevAttacking = isAttacking;
         if (other.collider.tag == "Projectile")
         {
             //float timer = 0;
@@ -160,7 +157,7 @@ public class EnemyAI : MonoBehaviour
 
             }
         }
-        if (other.gameObject.tag == "Player" && isAttacking)
+        /*if (other.gameObject.tag == "Player" && isAttacking)
         {
             //float timer = 0;
             if (other != null)
@@ -171,7 +168,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                /*Debug.Log("is null");*/
+                *//*Debug.Log("is null");*//*
             }
         }
         if (other.gameObject.tag == "Portal" && isAttacking)
@@ -179,17 +176,17 @@ public class EnemyAI : MonoBehaviour
             if (other != null)
             {
                 // do something
-                /*Debug.Log("Attacking portal");*/
+                *//*Debug.Log("Attacking portal");*//*
                 Portal portal = other.gameObject.GetComponent<Portal>();
                 portal.TakeDamage(40);
             }
             else
             {
-                /*Debug.Log("is null");*/
+                *//*Debug.Log("is null");*//*
             }
         }
 
-        disableMovement = false;
+        disableMovement = false;*/
 
     }
 
