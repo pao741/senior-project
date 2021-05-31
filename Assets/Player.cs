@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public static bool isDead;
 
     bool invulnerable = false;
-    float damageCooldownTimer = 2f;
+    float damageCooldownTimer = 1.35f;
     float nextDamageTime = 0f;
 
     public GameObject DeathMessage;
@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
         {
             nextDamageTime = Time.time + damageCooldownTimer;
             currentHealth -= damage;
-            Debug.Log(damage);
             healthBar.SetHealth(currentHealth); // set health bar to current health
             CinemachineShake.Instance.ShakeCamera(0.5f, .15f);
 

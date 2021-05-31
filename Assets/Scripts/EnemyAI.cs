@@ -32,6 +32,7 @@ public class EnemyAI : MonoBehaviour
 
     float takingDamageTimer = 0;
     float targetTimer = 0;
+    bool prevAttacking;
 
     Path path;
     int currentWaypoint = 0;
@@ -145,7 +146,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-
+        prevAttacking = isAttacking;
         if (other.collider.tag == "Projectile")
         {
             //float timer = 0;
@@ -166,7 +167,7 @@ public class EnemyAI : MonoBehaviour
             {
                 // do something
                 Player player = other.gameObject.GetComponent<Player>();
-                player.TakeDamage(40);
+                //player.TakeDamage(40);
             }
             else
             {

@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4484114901334885543}
   - component: {fileID: 4484114901334885540}
   - component: {fileID: 4484114901334885563}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Portal
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -368,9 +368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1280988482c384e4597c8ba6807350c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 0
+  player: {fileID: 0}
+  maxHealth: 300
   healthBar: {fileID: 4484114902033844990}
+  interactingRange: 1
+  interactingMessage: {fileID: 0}
+  actionText: {fileID: 0}
 --- !u!50 &4484114901334885540
 Rigidbody2D:
   serializedVersion: 4
@@ -405,7 +408,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008968145, y: -0.02092576}
+  m_Offset: {x: 0.008968145, y: -0.29165548}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -416,7 +419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38418573, y: 0.67116714}
+  m_Size: {x: 0.38418573, y: 0.12970772}
   m_EdgeRadius: 0
 --- !u!1 &4484114902033844976
 GameObject:

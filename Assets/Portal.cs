@@ -24,8 +24,11 @@ public class Portal : MonoBehaviour
 
     private bool interactable = false;
 
+    bool invulnerable = false;
+    float damageCooldownTimer = 1.35f;
+    float nextDamageTime = 0f;
+
     Rigidbody2D rb;
-    //public GameObject deathEffect;
 
     void Start()
     {
@@ -36,6 +39,11 @@ public class Portal : MonoBehaviour
 
     void Update()
     {
+        if (nextDamageTime <= Time.time) // takingDamage timer
+        {
+            invulnerable = false;
+        }
+
         if (interactable)
         {
             float distanceFromPlayer = Vector3.Distance(player.position, rb.position);
@@ -59,13 +67,14 @@ public class Portal : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
-
-        if (currentHealth <= 0)
+        float timer = 0;
+        if (!invulnerable)
         {
-            Destroy();
+            nextDamageTime = Time.time + damageCooldownTimer;
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth); // set health bar to current health
+
+            invulnerable = true;
         }
 
     }

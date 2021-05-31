@@ -6,14 +6,14 @@ public class AnimationHandler : MonoBehaviour
 {
     // Handle all animation event
 
-    CombatManager combatManager;
+    PlayerCombatManager combatManager;
     PlayerMovement playerMovement;
     public GameObject gameObject;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        combatManager = gameObject.GetComponent<CombatManager>();
+        combatManager = gameObject.GetComponent<PlayerCombatManager>();
     }
     void Update()
     {

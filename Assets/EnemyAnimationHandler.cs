@@ -6,10 +6,13 @@ public class EnemyAnimationHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     EnemyAI enemyAI;
+    EnemyCombatManager enemyAttackManager;
+    public GameObject AttackObject;
 
     void Start()
     {
         enemyAI = GetComponentInParent<EnemyAI>();
+        enemyAttackManager = AttackObject.GetComponentInParent<EnemyCombatManager>();
     }
 
     // Update is called once per frame
@@ -22,6 +25,7 @@ public class EnemyAnimationHandler : MonoBehaviour
     {
         enemyAI.Attack();
         EnableAttacking();
+        enemyAttackManager.SetAttacking(true);
     }
 
     void EnableAttacking() // called when start attacking
@@ -32,6 +36,7 @@ public class EnemyAnimationHandler : MonoBehaviour
     void DisableAttacking()
     {
         enemyAI.SetAttacking(false);
+        enemyAttackManager.SetAttacking(false);
     }
 
     void DisableMovement()
