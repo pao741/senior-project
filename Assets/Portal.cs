@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
     public Transform player;
 
     public int maxHealth = 1000;
-    public int currentHealth;
+    int currentHealth;
     //public Transform portalGFX;
 
     public HealthBar healthBar;
@@ -30,6 +30,7 @@ public class Portal : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
     }
 

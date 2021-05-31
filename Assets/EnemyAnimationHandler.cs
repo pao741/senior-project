@@ -18,13 +18,29 @@ public class EnemyAnimationHandler : MonoBehaviour
         
     }
 
-    void TriggerAttack()
+    void Attack() // called when attack
     {
         enemyAI.Attack();
+        EnableAttacking();
     }
 
-    void TriggerSetAttacking()
+    void EnableAttacking() // called when start attacking
     {
-        enemyAI.SetAttacking();
+        enemyAI.SetAttacking(true);
+    }
+
+    void DisableAttacking()
+    {
+        enemyAI.SetAttacking(false);
+    }
+
+    void DisableMovement()
+    {
+        enemyAI.SetDisableMovement(true);
+    }
+
+    void EnableMovement()
+    {
+        enemyAI.SetDisableMovement(false);
     }
 }

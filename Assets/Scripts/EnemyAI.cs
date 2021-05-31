@@ -257,10 +257,14 @@ public class EnemyAI : MonoBehaviour
         rb.AddForce(difference * attackPower);
     }
 
-    public void SetAttacking()
+    public void SetAttacking(bool state)
     {
-        disableMovement = !disableMovement;
-        isAttacking = !isAttacking;
+        isAttacking = state;
+    }
+
+    public void SetDisableMovement(bool state)
+    {
+        disableMovement = state;
     }
 
     public void SetTarget(Transform newTarget)

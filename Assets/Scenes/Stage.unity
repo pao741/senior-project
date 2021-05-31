@@ -9400,6 +9400,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 298742345}
     - target: {fileID: 4484114901334885543, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: maxHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484114901334885543, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
       propertyPath: actionText
       value: 
       objectReference: {fileID: 478360088}
