@@ -46,9 +46,7 @@ public class RoomManager : MonoBehaviour
             Debug.Log(numWaves);
             SpawnFromAllPoints();
             numWaves--;
-        }
-
-        if(enemies.Length == 0 && numWaves == 0)
+        }else if(enemies.Length == 0 && numWaves == 0)
         {
             Debug.Log(enemies.Length);
             Debug.Log(numWaves);

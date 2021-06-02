@@ -43,26 +43,21 @@ public class Portal : MonoBehaviour
         {
             invulnerable = false;
         }
-
-        if (interactable)
+        if (CheckPlayerInRange() && interactable)
         {
-            float distanceFromPlayer = Vector3.Distance(player.position, rb.position);
-            if (distanceFromPlayer <= interactingRange)
-            {
-                interactingMessage.SetActive(true);
+            interactingMessage.SetActive(true);
 
-                actionText.text = message;
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    SceneManager.LoadScene(0);
-                }
-            }
-            else
+            actionText.text = message;
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                interactingMessage.SetActive(false);
+                SceneManager.LoadScene(0);
             }
-            // go to next stage
         }
+        else
+        {
+            interactingMessage.SetActive(false);
+        }
+        // go to next stage
     }
 
     public void TakeDamage(int damage)
@@ -89,5 +84,11 @@ public class Portal : MonoBehaviour
     public void SetInteractable(bool state)
     {
         interactable = state;
+    }
+
+    public bool CheckPlayerInRange()
+    {
+        float distanceFromPlayer = Vector3.Distance(player.position, rb.position);
+        return distanceFromPlayer <= interactingRange;
     }
 }
