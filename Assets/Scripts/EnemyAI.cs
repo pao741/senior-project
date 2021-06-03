@@ -126,8 +126,12 @@ public class EnemyAI : MonoBehaviour
         {
             currentWaypoint++;
         }
-        
-        setAnimation(force);
+
+        if (!disableMovement)
+        {
+            setAnimation(force);
+        }
+
         float far = Vector3.Distance(target.position, rb.position);
 
         if (far <= attackRange && !takingDamage) // check if can attack
