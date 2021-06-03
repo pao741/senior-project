@@ -48,4 +48,9 @@ public class EnemyAnimationHandler : MonoBehaviour
     {
         enemyAI.SetDisableMovement(false);
     }
+
+    void StopRigidBody()
+    {
+        enemyAI.StopRigidBody();
+    }
 }

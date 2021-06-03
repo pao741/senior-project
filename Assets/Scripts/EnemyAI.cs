@@ -97,6 +97,10 @@ public class EnemyAI : MonoBehaviour
         if(currentWaypoint >= path.vectorPath.Count) // check if reach end of path
         {
             reachedEndOfPath = true;
+            /*if (!isAttacking)
+            {
+                rb.velocity = Vector3.zero; // stop rigidbody completely if there is no more path to go
+            }*/
             return;
         }
         else
@@ -236,5 +240,10 @@ public class EnemyAI : MonoBehaviour
         target = newTarget;
         targetTimer = Time.time + 30f;
         Debug.Log("Setting new target");
+    }
+
+    public void StopRigidBody()
+    {
+        rb.velocity = Vector3.zero;
     }
 }
