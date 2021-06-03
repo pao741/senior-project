@@ -29,6 +29,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange = 1.6f;
     bool isAttacking = false;
     bool takingDamage = false;
+    Vector3 attackingPosition; 
 
     float takingDamageTimer = 0;
     float targetTimer = 0;
@@ -75,6 +76,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(attackingPosition);
         if (isDead) // check if dead
         {
             return;
@@ -219,10 +221,11 @@ public class EnemyAI : MonoBehaviour
     {
 
         // find direction -> move to that direction -> check for collision
-        Vector2 difference = (target.position - rb.transform.position).normalized;
+        Vector2 difference = (attackingPosition - rb.transform.position).normalized;
         float attackPower = 2000f;
 
-        rb.AddForce(difference * attackPower);
+        /*rb.AddForce(difference * attackPower);*/
+        rb.velocity = difference * 5f;
     }
 
     public void SetAttacking(bool state)
@@ -239,11 +242,15 @@ public class EnemyAI : MonoBehaviour
     {
         target = newTarget;
         targetTimer = Time.time + 30f;
-        Debug.Log("Setting new target");
     }
 
     public void StopRigidBody()
     {
         rb.velocity = Vector3.zero;
+    }
+
+    public void SetAttackingPosition()
+    {
+        attackingPosition = target.position;
     }
 }

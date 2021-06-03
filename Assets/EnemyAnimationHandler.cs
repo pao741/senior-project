@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAnimationHandler : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Transform player;
+    Transform playerPosition; 
     EnemyAI enemyAI;
     EnemyCombatManager enemyAttackManager;
     public GameObject AttackObject;
@@ -21,11 +23,16 @@ public class EnemyAnimationHandler : MonoBehaviour
         
     }
 
+    void RememberPlayerPosition()
+    {
+        enemyAI.SetAttackingPosition();
+    }
+
     void Attack() // called when attack
     {
-        enemyAI.Attack();
         EnableAttacking();
         enemyAttackManager.SetAttacking(true);
+        enemyAI.Attack();
     }
 
     void EnableAttacking() // called when start attacking
