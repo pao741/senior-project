@@ -75,7 +75,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isDead)
+        if (isDead) // check if dead
         {
             return;
         }
@@ -90,11 +90,11 @@ public class EnemyAI : MonoBehaviour
             target = mainTarget;
         }
 
-        if (path == null)
+        if (path == null) // check if path is null (it shoudn't)
         {
             return;
         }
-        if(currentWaypoint >= path.vectorPath.Count)
+        if(currentWaypoint >= path.vectorPath.Count) // check if reach end of path
         {
             reachedEndOfPath = true;
             return;
@@ -104,6 +104,7 @@ public class EnemyAI : MonoBehaviour
             reachedEndOfPath = false;
         }
 
+        // calculate enemy movement
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
@@ -112,24 +113,25 @@ public class EnemyAI : MonoBehaviour
             rb.AddForce(force);
         }
 
+        // check distance from waypoint
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if(distance < nextWayPointDistance)
+        if(distance < nextWayPointDistance) // check if waypoint is reached
         {
             currentWaypoint++;
         }
         
         setAnimation(force);
         float far = Vector3.Distance(target.position, rb.position);
-        /*Debug.Log(far);*/
-        if (far <= attackRange && !takingDamage)
+
+        if (far <= attackRange && !takingDamage) // check if can attack
         {
             // Calling attack animation
             animator.Play("Enemy1_attack");
         }
     }
 
-    void setAnimation(Vector2 force)
+    void setAnimation(Vector2 force) // set and flip animation
     {
         if (force.x >= 0.01f)
         {
@@ -142,7 +144,7 @@ public class EnemyAI : MonoBehaviour
         animator.SetFloat("Speed", force.sqrMagnitude);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other) // unused for now
     {
         if (other.collider.tag == "Projectile")
         {

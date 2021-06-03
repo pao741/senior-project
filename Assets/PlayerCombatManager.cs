@@ -89,14 +89,14 @@ public class PlayerCombatManager : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
+    /*void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
         {
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
+    }*/
 
     
 

@@ -15,11 +15,11 @@ D:/Unity Projects/senior project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61518
+57979
 Successfully changed project path to: D:/Unity Projects/senior project
 D:/Unity Projects/senior project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 50.32 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 71.86 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path D:/Programs/Unity/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'D:/Programs/Unity/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Programs/Unity/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Programs/Unity/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Programs/Unity/2020.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,890 +43,88 @@ Register platform support module: D:/Programs/Unity/2020.3.2f1/Editor/Data/Playb
 Register platform support module: D:/Programs/Unity/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Programs/Unity/2020.3.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: D:/Programs/Unity/2020.3.2f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.003456 seconds.
+Registered in 0.003845 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 48.13 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 49.01 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.944 seconds
+- Completed reload, in  1.557 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001323 seconds.
+Registered in 0.001452 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 50.86 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 75.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.191 seconds
+- Completed reload, in  1.109 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
 Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
+System memory in use before: 99.5 MB.
 System memory in use after: 99.5 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2613.
-Total: 2.725000 ms (FindLiveObjects: 0.674900 ms CreateObjectMapping: 0.198800 ms MarkObjects: 1.683500 ms  DeleteObjects: 0.166600 ms)
+Total: 2.623700 ms (FindLiveObjects: 0.353600 ms CreateObjectMapping: 0.273700 ms MarkObjects: 1.805000 ms  DeleteObjects: 0.190100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Palettes/Tileset.prefab
-  artifactKey: Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Tileset.prefab using Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866b2ad1d45488257e2928fbbe8bc174') in 0.093914 seconds
-  Import took 0.097745 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.473464 seconds.
   path: Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png
   artifactKey: Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '001ccd1f59cdfb71e12e08f5baf5f1f3') in 0.251067 seconds
-  Import took 0.254714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 163.786133 seconds.
-  path: Assets/Palettes/Tileset.prefab
-  artifactKey: Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Tileset.prefab using Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e6b48e28b1f759c278c01bcaf198133') in 0.007095 seconds
-  Import took 0.011721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.389975 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_30.asset
-  artifactKey: Guid(4c637ece2220c5847bfcfb40a83c1b05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_30.asset using Guid(4c637ece2220c5847bfcfb40a83c1b05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa49eec896d9b97f49709ae95c43fb03') in 0.038235 seconds
-  Import took 0.041708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_53.asset
-  artifactKey: Guid(95e85714ac842b64b90b1d7a20e0da7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_53.asset using Guid(95e85714ac842b64b90b1d7a20e0da7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5416b9d9befb8157d40bf5b97ae1e374') in 0.019328 seconds
-  Import took 0.023346 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002175 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_41.asset
-  artifactKey: Guid(3137a984740783549af7c07f38ed38c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_41.asset using Guid(3137a984740783549af7c07f38ed38c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea637ae56624d22f5f30e5b2bf497c8f') in 0.012946 seconds
-  Import took 0.018605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000771 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_55.asset
-  artifactKey: Guid(eb149897c25584744993757e7d080bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_55.asset using Guid(eb149897c25584744993757e7d080bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a21aac57b40a0f6fecf9d37c719dad05') in 0.018500 seconds
-  Import took 0.022006 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000494 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_54.asset
-  artifactKey: Guid(526b5f6709bda5149a4c75a1d89034d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_54.asset using Guid(526b5f6709bda5149a4c75a1d89034d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b26bb1ce434f0012d377a4fff29922b6') in 0.017111 seconds
-  Import took 0.021669 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000299 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_56.asset
-  artifactKey: Guid(d4b64ad434f17b846b3c6677e7ad2675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_56.asset using Guid(d4b64ad434f17b846b3c6677e7ad2675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042079e95f0fc90981f7ab4e0643d537') in 0.016609 seconds
-  Import took 0.020958 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000997 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_59.asset
-  artifactKey: Guid(cc01ef229b529ee4b83e1ea32ad01794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_59.asset using Guid(cc01ef229b529ee4b83e1ea32ad01794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854f7b6629053405c0a90848156b8db8') in 0.021236 seconds
-  Import took 0.037214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_32.asset
-  artifactKey: Guid(3061d46a6251fdd459a1391028ef7989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_32.asset using Guid(3061d46a6251fdd459a1391028ef7989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2edb1f70abdfdba736f201616ff986d9') in 0.015348 seconds
-  Import took 0.018676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_38.asset
-  artifactKey: Guid(db0dffbc19c13e1479e97f171091ae2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_38.asset using Guid(db0dffbc19c13e1479e97f171091ae2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac5d48c470737ba28e62affb8a7eac0') in 0.018447 seconds
-  Import took 0.030987 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_49.asset
-  artifactKey: Guid(d671829342aed7441a13119d1b7cc8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_49.asset using Guid(d671829342aed7441a13119d1b7cc8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b67c6bbb49b7ad2db8fe04cb39f3024') in 0.012463 seconds
-  Import took 0.016557 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_35.asset
-  artifactKey: Guid(edd7f912a5d616845b428d772b0d9954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_35.asset using Guid(edd7f912a5d616845b428d772b0d9954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c66d7c8dfa4858e24fb1d97d31e7b2ff') in 0.019765 seconds
-  Import took 0.023631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000381 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_45.asset
-  artifactKey: Guid(a0b745bd6eaac8640825724e4eedaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_45.asset using Guid(a0b745bd6eaac8640825724e4eedaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53f9a9ba42b5339273777e639a04b57') in 0.017440 seconds
-  Import took 0.022295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_52.asset
-  artifactKey: Guid(f37d183a6f7ba1e4d93a851b5d44b04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_52.asset using Guid(f37d183a6f7ba1e4d93a851b5d44b04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aaee52184176fa63712242abdfc3269') in 0.013924 seconds
-  Import took 0.024744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_46.asset
-  artifactKey: Guid(4aecf4a5c3036af4ea2fcd1bff37a52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_46.asset using Guid(4aecf4a5c3036af4ea2fcd1bff37a52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f28bdde65663b203f1576180efbcba25') in 0.014412 seconds
-  Import took 0.018462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_61.asset
-  artifactKey: Guid(f31aada48695da941bf184e10c311ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_61.asset using Guid(f31aada48695da941bf184e10c311ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '628fa6135eb13a1ef72d91d4cacb800b') in 0.013647 seconds
-  Import took 0.017497 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_31.asset
-  artifactKey: Guid(8daec35c58d3cb8499c2a24067766aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_31.asset using Guid(8daec35c58d3cb8499c2a24067766aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1de223b1a4269693698e21a41bd0f9d0') in 0.016039 seconds
-  Import took 0.020623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_34.asset
-  artifactKey: Guid(9f069be15e4d0274eab5390a28f85306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_34.asset using Guid(9f069be15e4d0274eab5390a28f85306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce4303fbb2aa24a826d43afb7e8d927') in 0.021033 seconds
-  Import took 0.025237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_47.asset
-  artifactKey: Guid(6552f4a8a5206f649bd4f3100aa248c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_47.asset using Guid(6552f4a8a5206f649bd4f3100aa248c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '200926378aa1a3c288bed621efeabced') in 0.019495 seconds
-  Import took 0.023290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000303 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_62.asset
-  artifactKey: Guid(ca41348392294634e893311f6b948348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_62.asset using Guid(ca41348392294634e893311f6b948348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '565906153b14aecef861dd38088115da') in 0.012907 seconds
-  Import took 0.017694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_60.asset
-  artifactKey: Guid(a0facc53bf3872e4394b20d64db81ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_60.asset using Guid(a0facc53bf3872e4394b20d64db81ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e4e4129271736f9eadab00f60aa84a4') in 0.016270 seconds
-  Import took 0.035955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_63.asset
-  artifactKey: Guid(32e7753d3138ef64a89d16093bf96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_63.asset using Guid(32e7753d3138ef64a89d16093bf96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6cd607b966fcdfe461e758534f6198a') in 0.018579 seconds
-  Import took 0.039751 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_58.asset
-  artifactKey: Guid(8bba09ffef4c36f4fa0b1ac4ac7316d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_58.asset using Guid(8bba09ffef4c36f4fa0b1ac4ac7316d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4ce9ab9323f628e2e37c86f59a82b3') in 0.021759 seconds
-  Import took 0.031588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000626 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_37.asset
-  artifactKey: Guid(829f23a1d24fe6040a572640aec50f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_37.asset using Guid(829f23a1d24fe6040a572640aec50f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c303de5a364697bb68ff88593eaad5') in 0.016173 seconds
-  Import took 0.022844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_42.asset
-  artifactKey: Guid(a4c32b9bc618abb48ab52714957580e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_42.asset using Guid(a4c32b9bc618abb48ab52714957580e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ecb3bf3021e23a1c430f2c2a2856fb1') in 0.016939 seconds
-  Import took 0.021507 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_50.asset
-  artifactKey: Guid(7e86322339c6ecc47ac5c316225b6699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_50.asset using Guid(7e86322339c6ecc47ac5c316225b6699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db729d34fdc53fd7f5df3899c809cb25') in 0.016118 seconds
-  Import took 0.020177 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_33.asset
-  artifactKey: Guid(9b77ac24b69868846a7a3564778a2821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_33.asset using Guid(9b77ac24b69868846a7a3564778a2821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b27bcf9a5f28b75e64ecfad50932a4') in 0.011976 seconds
-  Import took 0.035784 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000325 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_57.asset
-  artifactKey: Guid(b2bdc992d693c144e9789d68e79939da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_57.asset using Guid(b2bdc992d693c144e9789d68e79939da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f68c1bc12f65d2f072bc6c3487b30ab1') in 0.014730 seconds
-  Import took 0.019292 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_44.asset
-  artifactKey: Guid(615107467b35ef94d8ab88feade72b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_44.asset using Guid(615107467b35ef94d8ab88feade72b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c27c09139e4add46e80e8367aeebd6f9') in 0.012611 seconds
-  Import took 0.017403 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_36.asset
-  artifactKey: Guid(2f09a61041c2c854d8ecf167bbfd018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_36.asset using Guid(2f09a61041c2c854d8ecf167bbfd018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d82b77c75d08da7ad90a8ccd29a560') in 0.017822 seconds
-  Import took 0.022563 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_40.asset
-  artifactKey: Guid(181cebfa6c709bb4ca70f2c29d6df702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_40.asset using Guid(181cebfa6c709bb4ca70f2c29d6df702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ff8d96d44413dd7ee5db13228454e5') in 0.012073 seconds
-  Import took 0.017463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_48.asset
-  artifactKey: Guid(c96daccd51ba2704d93c0ff84fbf65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_48.asset using Guid(c96daccd51ba2704d93c0ff84fbf65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4122b6d5a349e5b89345d856be8dd44b') in 0.016546 seconds
-  Import took 0.020404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000295 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_43.asset
-  artifactKey: Guid(03c6e53260ff85844b16172f929d127d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_43.asset using Guid(03c6e53260ff85844b16172f929d127d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b466f0efb1cbe745dd4ff48ec168ef9c') in 0.011747 seconds
-  Import took 0.015482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_39.asset
-  artifactKey: Guid(d7bc31374c75f3440831c1df799de7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_39.asset using Guid(d7bc31374c75f3440831c1df799de7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32c901d84c07cfe5f07c1c152347774') in 0.014645 seconds
-  Import took 0.018926 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_51.asset
-  artifactKey: Guid(90baf2287cdb27244a12ed318a6b92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_51.asset using Guid(90baf2287cdb27244a12ed318a6b92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff9a29e54c81768c96e2482a500e6583') in 0.010866 seconds
-  Import took 0.017943 seconds .
+Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a344d40b5235638de5a6a065b3f79661') in 0.303031 seconds
+  Import took 0.306971 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006702 seconds.
+Registered in 0.002074 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 100.8 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2626.
-Total: 2.244600 ms (FindLiveObjects: 0.188500 ms CreateObjectMapping: 0.092500 ms MarkObjects: 1.829300 ms  DeleteObjects: 0.133100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001348 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.960 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 100.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2630.
-Total: 2.153000 ms (FindLiveObjects: 0.231100 ms CreateObjectMapping: 0.123700 ms MarkObjects: 1.687200 ms  DeleteObjects: 0.110100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001864 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.919 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 100.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2634.
-Total: 2.475100 ms (FindLiveObjects: 0.251800 ms CreateObjectMapping: 0.145200 ms MarkObjects: 1.928800 ms  DeleteObjects: 0.147700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 533.088324 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_38.asset
-  artifactKey: Guid(db0dffbc19c13e1479e97f171091ae2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_38.asset using Guid(db0dffbc19c13e1479e97f171091ae2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b5cccd725e1fceb4f60879b686b35d') in 0.055703 seconds
-  Import took 0.059698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000420 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_49.asset
-  artifactKey: Guid(d671829342aed7441a13119d1b7cc8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_49.asset using Guid(d671829342aed7441a13119d1b7cc8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '597547ada1d195bda48571441289e15f') in 0.010882 seconds
-  Import took 0.017336 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_62.asset
-  artifactKey: Guid(ca41348392294634e893311f6b948348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_62.asset using Guid(ca41348392294634e893311f6b948348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e30a542bca4ae32e625867d85fa653') in 0.013249 seconds
-  Import took 0.025347 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000432 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_61.asset
-  artifactKey: Guid(f31aada48695da941bf184e10c311ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_61.asset using Guid(f31aada48695da941bf184e10c311ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73eabbc0349b09226c3223437f14047d') in 0.014024 seconds
-  Import took 0.020967 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_63.asset
-  artifactKey: Guid(32e7753d3138ef64a89d16093bf96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_63.asset using Guid(32e7753d3138ef64a89d16093bf96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f5b6bc7bb170137e658f796266f003') in 0.012221 seconds
-  Import took 0.016246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_37.asset
-  artifactKey: Guid(829f23a1d24fe6040a572640aec50f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_37.asset using Guid(829f23a1d24fe6040a572640aec50f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2daf0226dd547b838f4175dc922e1e13') in 0.012964 seconds
-  Import took 0.017656 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_50.asset
-  artifactKey: Guid(7e86322339c6ecc47ac5c316225b6699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_50.asset using Guid(7e86322339c6ecc47ac5c316225b6699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2661e61dd9b8622b6623c5f43ff688e') in 0.012340 seconds
-  Import took 0.016177 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_36.asset
-  artifactKey: Guid(2f09a61041c2c854d8ecf167bbfd018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_36.asset using Guid(2f09a61041c2c854d8ecf167bbfd018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285ee5bb2a3fe47a4b8bfc0823f735f9') in 0.023096 seconds
-  Import took 0.027157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_51.asset
-  artifactKey: Guid(90baf2287cdb27244a12ed318a6b92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_51.asset using Guid(90baf2287cdb27244a12ed318a6b92af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32fb2916bb25194947610528b94407a5') in 0.013838 seconds
-  Import took 0.017748 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000418 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_39.asset
-  artifactKey: Guid(d7bc31374c75f3440831c1df799de7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_39.asset using Guid(d7bc31374c75f3440831c1df799de7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a08ffcb50f06007a326a256fe4138b') in 0.017024 seconds
-  Import took 0.020692 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001420 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.164 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 100.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2639.
-Total: 2.304000 ms (FindLiveObjects: 0.266100 ms CreateObjectMapping: 0.208000 ms MarkObjects: 1.678000 ms  DeleteObjects: 0.150700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 336.609967 seconds.
-  path: Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png
-  artifactKey: Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bb28c088529a00672ea977993c91d8') in 0.232132 seconds
-  Import took 0.239031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.230100 seconds.
-  path: Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png
-  artifactKey: Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7951b9e429f47c5067ba440ec58e3885') in 0.261988 seconds
-  Import took 0.278200 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.659555 seconds.
-  path: Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png
-  artifactKey: Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653422e2e7e2878ff43c208937561451') in 0.128328 seconds
-  Import took 0.132553 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.120554 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_64.asset
-  artifactKey: Guid(9e48eec3b1884b74696ddd95719654a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_64.asset using Guid(9e48eec3b1884b74696ddd95719654a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8c9534388f6f7bef5f36acbb0bdfb1') in 0.023203 seconds
-  Import took 0.027482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.899239 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_64.asset
-  artifactKey: Guid(9e48eec3b1884b74696ddd95719654a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_64.asset using Guid(9e48eec3b1884b74696ddd95719654a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1559381a7024d08bad9ec8797732e3') in 0.078082 seconds
-  Import took 0.094750 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.919976 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_52.asset
-  artifactKey: Guid(f37d183a6f7ba1e4d93a851b5d44b04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_52.asset using Guid(f37d183a6f7ba1e4d93a851b5d44b04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4f56392e1d2518d0d77530036ec4c03') in 0.018272 seconds
-  Import took 0.027618 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.095599 seconds.
-  path: Assets/Palettes/LevelOne/project_tileset-Sheet_40.asset
-  artifactKey: Guid(181cebfa6c709bb4ca70f2c29d6df702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/LevelOne/project_tileset-Sheet_40.asset using Guid(181cebfa6c709bb4ca70f2c29d6df702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf15ede1336b464dcf6535a340554f95') in 0.018195 seconds
-  Import took 0.022606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 62.155235 seconds.
-  path: Assets/Palettes/Tileset.prefab
-  artifactKey: Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Tileset.prefab using Guid(01d51e9f2de9cc241b5d83189aaeb1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977cbee57a22151fbf9fcde1dc205c25') in 0.011801 seconds
-  Import took 0.015394 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001461 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2645.
-Total: 2.445500 ms (FindLiveObjects: 0.209200 ms CreateObjectMapping: 0.107100 ms MarkObjects: 2.004300 ms  DeleteObjects: 0.123600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001473 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.077 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2649.
-Total: 2.359700 ms (FindLiveObjects: 0.229000 ms CreateObjectMapping: 0.119400 ms MarkObjects: 1.893900 ms  DeleteObjects: 0.115600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001700 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.946 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2653.
-Total: 2.486400 ms (FindLiveObjects: 0.232900 ms CreateObjectMapping: 0.162500 ms MarkObjects: 1.981400 ms  DeleteObjects: 0.107800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001331 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.026 seconds
+- Completed reload, in  1.162 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
+System memory in use before: 100.6 MB.
+System memory in use after: 100.6 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2657.
-Total: 2.206400 ms (FindLiveObjects: 0.228600 ms CreateObjectMapping: 0.105100 ms MarkObjects: 1.758300 ms  DeleteObjects: 0.112900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001561 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.375 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2661.
-Total: 8.115700 ms (FindLiveObjects: 0.421500 ms CreateObjectMapping: 0.320500 ms MarkObjects: 6.850900 ms  DeleteObjects: 0.520900 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2624.
+Total: 2.058300 ms (FindLiveObjects: 0.235700 ms CreateObjectMapping: 0.119000 ms MarkObjects: 1.568200 ms  DeleteObjects: 0.134400 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003505 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.092 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2665.
-Total: 2.293100 ms (FindLiveObjects: 0.235400 ms CreateObjectMapping: 0.116000 ms MarkObjects: 1.823100 ms  DeleteObjects: 0.116700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001345 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.975 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2669.
-Total: 2.490500 ms (FindLiveObjects: 0.231300 ms CreateObjectMapping: 0.097200 ms MarkObjects: 2.042100 ms  DeleteObjects: 0.118200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001295 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.073 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2673.
-Total: 2.357500 ms (FindLiveObjects: 0.241800 ms CreateObjectMapping: 0.186200 ms MarkObjects: 1.771000 ms  DeleteObjects: 0.157000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001523 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.439 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2677.
-Total: 6.617900 ms (FindLiveObjects: 0.446900 ms CreateObjectMapping: 0.351200 ms MarkObjects: 5.404400 ms  DeleteObjects: 0.413800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001375 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.015 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.1 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2681.
-Total: 2.683800 ms (FindLiveObjects: 0.262900 ms CreateObjectMapping: 0.178600 ms MarkObjects: 2.123700 ms  DeleteObjects: 0.116800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002298 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.978 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2145 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.1 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2685.
-Total: 2.907300 ms (FindLiveObjects: 0.353600 ms CreateObjectMapping: 0.525400 ms MarkObjects: 1.912600 ms  DeleteObjects: 0.114300 ms)
+Received Import Request.
+  Time since last request: 105.778624 seconds.
+  path: Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png
+  artifactKey: Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/LevelOne/project_tileset-Sheet.png using Guid(7e5643b183d301f42804b518b6133a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca9a2ddab53587e01005c493288f8e29') in 0.160796 seconds
+  Import took 0.186955 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
