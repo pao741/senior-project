@@ -39,6 +39,11 @@ public class EnemyAI : MonoBehaviour
     bool reachedEndOfPath = false;
     bool isDead = false;
 
+    bool isRoaming = true;
+    bool hasDestination = false;
+    bool reachedRoamingPath = false;
+    Vector3 roamPosition;
+
     Seeker seeker;
     Rigidbody2D rb;
 
@@ -56,9 +61,19 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone() && !isDead)
+        if (isRoaming && seeker.IsDone() && !reachedRoamingPath)
         {
-
+            /*Roam();*/
+            if (!hasDestination)
+            {
+                Debug.Log("Assigning");
+                hasDestination = true;
+                roamPosition = rb.position + Random.insideUnitCircle.normalized * 2f;
+            }
+            seeker.StartPath(rb.position, roamPosition, OnPathComplete);
+        }
+        else if (!isRoaming && seeker.IsDone() && !isDead)
+        {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
 
@@ -76,7 +91,6 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(attackingPosition);
         if (isDead) // check if dead
         {
             return;
@@ -127,9 +141,19 @@ public class EnemyAI : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (!disableMovement)
+        if (!disableMovement && !reachedRoamingPath)
         {
             setAnimation(force);
+        }
+
+        if (isRoaming)
+        {
+
+            if (Vector2.Distance(rb.position, roamPosition) < 0.1) // check if waypoint is reached
+            {
+                rb.velocity = Vector3.zero;
+                reachedRoamingPath = true;
+            }
         }
 
         float far = Vector3.Distance(target.position, rb.position);
@@ -230,6 +254,11 @@ public class EnemyAI : MonoBehaviour
 
         /*rb.AddForce(difference * attackPower);*/
         rb.velocity = difference * 5f;
+    }
+
+    private void Roam()
+    {
+        Vector3 roamPosition = Random.insideUnitCircle.normalized;
     }
 
     public void SetAttacking(bool state)

@@ -32,6 +32,7 @@ public class EnemyAnimationHandler : MonoBehaviour
     {
         EnableAttacking();
         enemyAttackManager.SetAttacking(true);
+        enemyAI.SetAttacking(true);
         enemyAI.Attack();
     }
 
