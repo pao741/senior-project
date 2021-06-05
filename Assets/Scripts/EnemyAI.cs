@@ -173,6 +173,7 @@ public class EnemyAI : MonoBehaviour
         if (far <= 2f && isRoaming) // check if can attack
         {
             isRoaming = false;
+            disableMovement = false;
         }
 
         if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack
