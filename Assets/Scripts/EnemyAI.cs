@@ -62,20 +62,22 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (isRoaming && seeker.IsDone() && !reachedRoamingPath)
+        if (!isDead)
         {
-            /*Roam();*/
-            if (!hasDestination)
+            if (isRoaming && seeker.IsDone() && !reachedRoamingPath)
             {
-                Debug.Log("Assigning");
-                hasDestination = true;
-                roamPosition = rb.position + Random.insideUnitCircle.normalized * 2f;
+                /*Roam*/
+                if (!hasDestination)
+                {
+                    hasDestination = true;
+                    roamPosition = rb.position + Random.insideUnitCircle.normalized * 2f;
+                }
+                seeker.StartPath(rb.position, roamPosition, OnPathComplete);
             }
-            seeker.StartPath(rb.position, roamPosition, OnPathComplete);
-        }
-        else if (!isRoaming && seeker.IsDone() && !isDead)
-        {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            else if (!isRoaming && seeker.IsDone())
+            {
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
+            }
         }
 
     }
@@ -111,6 +113,7 @@ public class EnemyAI : MonoBehaviour
         {
             hasDestination = false;
             reachedRoamingPath = false;
+            disableMovement = false;
         }
 
         if (path == null) // check if path is null (it shoudn't)
@@ -120,10 +123,6 @@ public class EnemyAI : MonoBehaviour
         if(currentWaypoint >= path.vectorPath.Count) // check if reach end of path
         {
             reachedEndOfPath = true;
-            /*if (!isAttacking)
-            {
-                rb.velocity = Vector3.zero; // stop rigidbody completely if there is no more path to go
-            }*/
             return;
         }
         else
@@ -136,8 +135,9 @@ public class EnemyAI : MonoBehaviour
         Vector2 force = direction * speed * Time.deltaTime;
 
         if (!disableMovement)
-        { 
-            rb.AddForce(force);
+        {
+            //rb.AddForce(force);
+            rb.velocity = direction * 2f;
         }
 
         // check distance from waypoint
@@ -157,15 +157,25 @@ public class EnemyAI : MonoBehaviour
         {
             if (Vector2.Distance(rb.position, roamPosition) < 0.3f && reachedRoamingPath == false) // check if waypoint is reached
             {
-                rb.velocity = Vector3.zero;
                 reachedRoamingPath = true;
                 roamTimer = Time.time + 3f;
+                disableMovement = true;
             }
+        }
+
+        if (reachedRoamingPath)
+        {
+            StopRigidBody();
         }
 
         float far = Vector3.Distance(target.position, rb.position);
 
-        if (far <= attackRange && !takingDamage) // check if can attack
+        if (far <= 2f && isRoaming) // check if can attack
+        {
+            isRoaming = false;
+        }
+
+        if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack
         {
             // Calling attack animation
             animator.Play("Enemy1_attack");
@@ -261,11 +271,6 @@ public class EnemyAI : MonoBehaviour
 
         /*rb.AddForce(difference * attackPower);*/
         rb.velocity = difference * 5f;
-    }
-
-    private void Roam()
-    {
-        Vector3 roamPosition = Random.insideUnitCircle.normalized;
     }
 
     public void SetAttacking(bool state)
