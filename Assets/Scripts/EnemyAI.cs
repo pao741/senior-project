@@ -42,6 +42,7 @@ public class EnemyAI : MonoBehaviour
     bool isRoaming = true;
     bool hasDestination = false;
     bool reachedRoamingPath = false;
+    float roamTimer = 0;
     Vector3 roamPosition;
 
     Seeker seeker;
@@ -106,6 +107,12 @@ public class EnemyAI : MonoBehaviour
             target = mainTarget;
         }
 
+        if (roamTimer <= Time.time && reachedRoamingPath == true)
+        {
+            hasDestination = false;
+            reachedRoamingPath = false;
+        }
+
         if (path == null) // check if path is null (it shoudn't)
         {
             return;
@@ -148,11 +155,11 @@ public class EnemyAI : MonoBehaviour
 
         if (isRoaming)
         {
-
-            if (Vector2.Distance(rb.position, roamPosition) < 0.1) // check if waypoint is reached
+            if (Vector2.Distance(rb.position, roamPosition) < 0.3f && reachedRoamingPath == false) // check if waypoint is reached
             {
                 rb.velocity = Vector3.zero;
                 reachedRoamingPath = true;
+                roamTimer = Time.time + 3f;
             }
         }
 
