@@ -146,19 +146,23 @@ public class EnemyAI : MonoBehaviour
 
         float far = Vector3.Distance(Player.getPosition(), thisEnemy.position);
         
-        if (far <= 5f && isRoaming) // check if can attack (must be before check if reach end of path)
+        if (far <= 5f && isRoaming) // check if can attack (Must come before check for the end of path)
         {
             isRoaming = false;
             reachedRoamingPath = false;
             disableMovement = false;
         }
 
-        if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack
+        if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack 
         {
             // Calling attack animation
             animator.Play("Enemy1_attack");
         }
 
+        // THIS IF STATEMENT IS VERY WEIRD (sometimes code below it doesn't even get to run)
+        // Index out of bound will happen if this chunk is moved to the end of the Update()
+        // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+        
         if (currentWaypoint >= path.vectorPath.Count) // check if reach end of path
         {
             reachedEndOfPath = true;
@@ -168,6 +172,8 @@ public class EnemyAI : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
+
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
         
 
