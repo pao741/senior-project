@@ -58,7 +58,8 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        //mainTarget = target;
+        float seconds = Random.Range(1.0f, 8.0f);
+        roamTimer = Time.time + seconds;
 
         InvokeRepeating("UpdatePath", 0f, .1f);
         
