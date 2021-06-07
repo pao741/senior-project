@@ -63,6 +63,5 @@ public class Player : MonoBehaviour
     public void setInvulnerable(bool cond)
     {
         invulnerable = cond;
-        Debug.Log(invulnerable);
     }
 }

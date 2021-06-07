@@ -462,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 1789675195319993141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.344, y: -1.318, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1789675195445431617}
   - {fileID: 1449356340038217358}
@@ -527,7 +527,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6615614522939566690, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+  thisEnemy: {fileID: 1789675195319993150}
   animator: {fileID: 1449356340724598807}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
   speed: 2000
   nextWayPointDistance: 3
   enemyGFX: {fileID: 1789675195445431617}

@@ -8,7 +8,9 @@ public class EnemyAI : MonoBehaviour
 
     public Transform target;
     Transform mainTarget;
+    public Transform thisEnemy;
     public Animator animator;
+    public LayerMask enemyLayer;
 
     public float speed = 100f;
     public float nextWayPointDistance = 3f;
@@ -44,6 +46,8 @@ public class EnemyAI : MonoBehaviour
     bool reachedRoamingPath = false;
     float roamTimer = 0;
     Vector3 roamPosition;
+    Vector3 roamDirection;
+    float distanceFromRoamPosition;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -70,13 +74,36 @@ public class EnemyAI : MonoBehaviour
                 if (!hasDestination)
                 {
                     hasDestination = true;
-                    roamPosition = rb.position + Random.insideUnitCircle.normalized * 2f;
+                    while (true)
+                    {
+                        Vector3 randomDir = (Vector3)Random.insideUnitCircle.normalized;
+                        /*roamPosition = enemyGFX.position + randomDir * 5f;*/
+                        roamDirection = thisEnemy.position + randomDir;
+                        roamPosition = thisEnemy.position + randomDir * 5f;
+
+                        RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, randomDir, 5f); //(roamDirection).magnitude
+
+                        Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
+                        if (hit != null)
+                        {
+                            if (hit.collider.tag == "Walls")
+                            {
+                                Debug.Log("Hit wall");
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("Doesn't hit");
+                            break;
+                        }
+                    }
+                    /*roamPosition = Random.insideUnitCircle.normalized * 6f;*/
                 }
-                seeker.StartPath(rb.position, roamPosition, OnPathComplete);
+                seeker.StartPath(thisEnemy.position, roamPosition, OnPathComplete);
             }
             else if (!isRoaming && seeker.IsDone())
             {
-                seeker.StartPath(rb.position, target.position, OnPathComplete);
+                seeker.StartPath(thisEnemy.position, target.position, OnPathComplete);
             }
         }
 
@@ -108,12 +135,14 @@ public class EnemyAI : MonoBehaviour
         {
             target = mainTarget;
         }
-
+        
         if (roamTimer <= Time.time && reachedRoamingPath == true)
         {
+            Debug.Log("finding new path");
+            disableMovement = false;
             hasDestination = false;
             reachedRoamingPath = false;
-            disableMovement = false;
+            
         }
 
         if (path == null) // check if path is null (it shoudn't)
@@ -155,23 +184,37 @@ public class EnemyAI : MonoBehaviour
 
         if (isRoaming)
         {
-            if (Vector2.Distance(rb.position, roamPosition) < 0.3f && reachedRoamingPath == false) // check if waypoint is reached
+            Collider2D hitObject = Physics2D.OverlapCircle(roamPosition, 1f, enemyLayer);
+            if (hitObject != null && hitObject.transform == thisEnemy)
             {
+                StopRigidBody();
+                animator.Play("Enemy1_idle");
                 reachedRoamingPath = true;
+                float seconds = Random.Range(3.0f, 6.0f);
                 roamTimer = Time.time + 3f;
                 disableMovement = true;
             }
+
+            /*distanceFromRoamPosition = Vector2.Distance(thisEnemy.position, roamPosition);
+            *//*distanceFromRoamPosition = (thisEnemy.position - roamPosition).sqrMagnitude;*/
+            /*Debug.Log(Vector2.Distance(rb.position, roamPosition));*//*
+            Debug.Log(distanceFromRoamPosition);
+            if (distanceFromRoamPosition < 1f) //  && reachedRoamingPath == false check if waypoint is reached
+            {
+                StopRigidBody();
+                reachedRoamingPath = true;
+                float seconds = Random.Range(3.0f, 6.0f);
+                roamTimer = Time.time + 3f;
+                disableMovement = true;
+            }*/
         }
 
-        if (reachedRoamingPath)
-        {
-            StopRigidBody();
-        }
 
         float far = Vector3.Distance(target.position, rb.position);
 
         if (far <= 2f && isRoaming) // check if can attack
         {
+            reachedRoamingPath = false;
             isRoaming = false;
             disableMovement = false;
         }
@@ -181,6 +224,11 @@ public class EnemyAI : MonoBehaviour
             // Calling attack animation
             animator.Play("Enemy1_attack");
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(roamPosition, 1f);
     }
 
     void setAnimation(Vector2 force) // set and flip animation
@@ -210,6 +258,14 @@ public class EnemyAI : MonoBehaviour
                 rb.AddForce(-difference * knockbackPower);*/
 
             }
+        }
+
+        if (isRoaming && other.collider.tag == "Walls")
+        {
+            reachedRoamingPath = true;
+            float seconds = Random.Range(3.0f, 6.0f);
+            roamTimer = Time.time + 3f;
+            disableMovement = true;
         }
 
     }
