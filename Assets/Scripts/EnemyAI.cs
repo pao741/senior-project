@@ -82,16 +82,20 @@ public class EnemyAI : MonoBehaviour
 
                         RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, randomDir, 5f); 
 
-                        // Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
-                        if (hit != null)
+                        /*Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
+                        Debug.Log(hit.collider.tag);*/
+                        if (hit == null)
                         {
-                            if (hit.collider.tag == "Walls") // "Hit wall
-                            {
-                            }
+                            //Debug.Log("Path found");
+                            break;
                         }
                         else // Doesn't hit
                         {
-                            break;
+                            //Debug.Log("Path not found");
+                            if (hit.collider.tag == "Walls") // if i remove this line the game crash idk why
+                            {
+                                
+                            }
                         }
                     }
                 }
@@ -134,11 +138,9 @@ public class EnemyAI : MonoBehaviour
         
         if (roamTimer <= Time.time && reachedRoamingPath == true)
         {
-            Debug.Log("finding new path");
             disableMovement = false;
             hasDestination = false;
             reachedRoamingPath = false;
-            
         }
 
         if (path == null) // check if path is null (it shoudn't)
@@ -186,8 +188,8 @@ public class EnemyAI : MonoBehaviour
                 StopRigidBody();
                 animator.Play("Enemy1_idle");
                 reachedRoamingPath = true;
-                float seconds = Random.Range(3.0f, 6.0f);
-                roamTimer = Time.time + 3f;
+                float seconds = Random.Range(3.0f, 8.0f);
+                roamTimer = Time.time + seconds;
                 disableMovement = true;
             }
 
@@ -227,7 +229,8 @@ public class EnemyAI : MonoBehaviour
 
     void setAnimation(Vector2 force) // set and flip animation
     {
-        if (force.x >= 0.01f)
+        float differenceX = thisEnemy.position.x - roamPosition.x;
+        if (force.x >= 0.01f && differenceX < 0.01)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
