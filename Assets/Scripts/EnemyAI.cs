@@ -6,8 +6,8 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
 
-    public Transform target;
-    Transform mainTarget;
+    //Transform target;
+    //Transform mainTarget;
     public Transform thisEnemy;
     public Animator animator;
     public LayerMask enemyLayer;
@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
     Vector3 attackingPosition; 
 
     float takingDamageTimer = 0;
-    float targetTimer = 0;
+    //float targetTimer = 0;
 
     Path path;
     int currentWaypoint = 0;
@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        mainTarget = target;
+        //mainTarget = target;
 
         InvokeRepeating("UpdatePath", 0f, .1f);
         
@@ -103,7 +103,8 @@ public class EnemyAI : MonoBehaviour
             }
             else if (!isRoaming && seeker.IsDone())
             {
-                seeker.StartPath(thisEnemy.position, target.position, OnPathComplete);
+                //seeker.StartPath(thisEnemy.position, target.position, OnPathComplete);
+                seeker.StartPath(thisEnemy.position, Player.getPosition(), OnPathComplete);
             }
         }
 
@@ -130,11 +131,6 @@ public class EnemyAI : MonoBehaviour
         {
             takingDamage = false;
         }
-
-        if (targetTimer <= Time.time) // aggro timer
-        {
-            target = mainTarget;
-        }
         
         if (roamTimer <= Time.time && reachedRoamingPath == true)
         {
@@ -147,7 +143,23 @@ public class EnemyAI : MonoBehaviour
         {
             return;
         }
-        if(currentWaypoint >= path.vectorPath.Count) // check if reach end of path
+
+        float far = Vector3.Distance(Player.getPosition(), thisEnemy.position);
+        
+        if (far <= 5f && isRoaming) // check if can attack (must be before check if reach end of path)
+        {
+            isRoaming = false;
+            reachedRoamingPath = false;
+            disableMovement = false;
+        }
+
+        if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack
+        {
+            // Calling attack animation
+            animator.Play("Enemy1_attack");
+        }
+
+        if (currentWaypoint >= path.vectorPath.Count) // check if reach end of path
         {
             reachedEndOfPath = true;
             return;
@@ -156,6 +168,8 @@ public class EnemyAI : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
+
+        
 
         // calculate enemy movement
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
@@ -192,34 +206,8 @@ public class EnemyAI : MonoBehaviour
                 roamTimer = Time.time + seconds;
                 disableMovement = true;
             }
-
-            /*distanceFromRoamPosition = Vector2.Distance(thisEnemy.position, roamPosition);
-            Debug.Log(distanceFromRoamPosition);
-            if (distanceFromRoamPosition < 1f) //  && reachedRoamingPath == false check if waypoint is reached
-            {
-                StopRigidBody();
-                reachedRoamingPath = true;
-                float seconds = Random.Range(3.0f, 6.0f);
-                roamTimer = Time.time + 3f;
-                disableMovement = true;
-            }*/
         }
-
-
-        float far = Vector3.Distance(target.position, rb.position);
-
-        if (far <= 2f && isRoaming) // check if can attack
-        {
-            reachedRoamingPath = false;
-            isRoaming = false;
-            disableMovement = false;
-        }
-
-        if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack
-        {
-            // Calling attack animation
-            animator.Play("Enemy1_attack");
-        }
+        
     }
 
     /*void OnDrawGizmosSelected()
@@ -276,7 +264,7 @@ public class EnemyAI : MonoBehaviour
     {
         takingDamage = true;
 
-        SetTarget(source);
+        //SetTarget(source);
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth); // set health bar to current health
@@ -302,6 +290,7 @@ public class EnemyAI : MonoBehaviour
         /*Instantiate(deathEffect, transform.position, Quaternion.identity);*/
         Debug.Log("It fucking dies");
         GetComponent<Collider2D>().enabled = false;
+        //Physics.IgnoreCollision(theobjectToIgnore.collider, collider);
         healthBar.Destroy(); //Destroy(healthBar);
         gameObject.tag = "Corpse";
 
@@ -329,12 +318,6 @@ public class EnemyAI : MonoBehaviour
         disableMovement = state;
     }
 
-    public void SetTarget(Transform newTarget)
-    {
-        target = newTarget;
-        targetTimer = Time.time + 30f;
-    }
-
     public void StopRigidBody()
     {
         rb.velocity = Vector3.zero;
@@ -342,6 +325,7 @@ public class EnemyAI : MonoBehaviour
 
     public void SetAttackingPosition()
     {
-        attackingPosition = target.position;
+        //attackingPosition = target.position;
+        attackingPosition = Player.getPosition();
     }
 }

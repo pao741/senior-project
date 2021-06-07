@@ -17,12 +17,15 @@ public class Player : MonoBehaviour
 
     public GameObject DeathMessage;
 
+    public static Transform playerTransform;
+
     // Start is called before the first frame update
     void Start()
     {
         isDead = false;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        playerTransform = GetComponent<Player>().transform;
     }
 
     // Update is called once per frame
@@ -63,5 +66,10 @@ public class Player : MonoBehaviour
     public void setInvulnerable(bool cond)
     {
         invulnerable = cond;
+    }
+
+    public static Vector3 getPosition()
+    {
+        return playerTransform.position;
     }
 }
