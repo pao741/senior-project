@@ -29,12 +29,14 @@ public class Portal : MonoBehaviour
     float nextDamageTime = 0f;
 
     Rigidbody2D rb;
+    static Transform portalTransform;
 
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
+        portalTransform = GetComponent<Portal>().transform;
     }
 
     void Update()
@@ -91,5 +93,10 @@ public class Portal : MonoBehaviour
     {
         float distanceFromPlayer = Vector3.Distance(player.position, rb.position);
         return distanceFromPlayer <= interactingRange;
+    }
+
+    public static Vector3 getPosition()
+    {
+        return portalTransform.position;
     }
 }
