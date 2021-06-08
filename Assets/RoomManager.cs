@@ -54,11 +54,11 @@ public class RoomManager : MonoBehaviour
             portal.SetInteractable(true);
             // activate portal
         }
-        else // needed this other wise it would go into if for some reason
+        /*else // needed this other wise it would go into if for some reason
         {
             roomCleared = false;
             portal.SetInteractable(false);
-        }
+        }*/
 
     }
 

@@ -83,6 +83,7 @@ public class Portal : MonoBehaviour
 
     public void SetInteractable(bool state)
     {
+        gameObject.SetActive(state);
         interactable = state;
     }
 

@@ -10766,6 +10766,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4484114900656917347, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4484114901334885542, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -10822,6 +10826,14 @@ PrefabInstance:
       propertyPath: interactingMessage
       value: 
       objectReference: {fileID: 1681947777}
+    - target: {fileID: 4484114901334885561, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484114901334885561, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1977331553
+      objectReference: {fileID: 0}
     - target: {fileID: 4484114901334885562, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
       propertyPath: m_Name
       value: Portal
@@ -10829,6 +10841,18 @@ PrefabInstance:
     - target: {fileID: 4484114901334885562, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484114901334885563, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7621232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484114901334885563, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484114901334885563, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024552286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
