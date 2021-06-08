@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case State.Attack:
-                rb.velocity = attackDirection.normalized * currentAttackMovementSpeed;
+                /*rb.velocity = attackDirection.normalized * currentAttackMovementSpeed;*/
                 break;
 
         }
@@ -160,15 +160,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetAttackState()
     {
-        attackDirection = lookDir;
+        /*attackDirection = lookDir;
         currentAttackMovementSpeed = 10f;
-        state = State.Attack;
+        state = State.Attack;*/
     }
 
     void Attack()
     {
 
-        float AttackMovementSpeedDropMultiplier = 10f;
+        /*float AttackMovementSpeedDropMultiplier = 10f;
         currentAttackMovementSpeed -= currentAttackMovementSpeed * AttackMovementSpeedDropMultiplier * Time.deltaTime;
 
         float attackMovementSpeedMinimum = 5f;
@@ -176,8 +176,8 @@ public class PlayerMovement : MonoBehaviour
         if (currentAttackMovementSpeed < attackMovementSpeedMinimum)
         {
             state = State.Normal;
-            /*nextDashTimer = Time.time + dashCooldown;*/
-        }
+            *//*nextDashTimer = Time.time + dashCooldown;*//*
+        }*/
     }
 
     void ResetDash()
