@@ -9,7 +9,7 @@ public class Portal : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform player;
-
+    public WaypointerHandler waypointerHandler;
     public int maxHealth = 1000;
     int currentHealth;
     //public Transform portalGFX;
@@ -87,6 +87,7 @@ public class Portal : MonoBehaviour
     {
         gameObject.SetActive(state);
         interactable = state;
+        //waypointerHandler.setActiveWaypoint(state);
     }
 
     public bool CheckPlayerInRange()

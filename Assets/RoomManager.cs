@@ -12,8 +12,9 @@ public class RoomManager : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public bool roomCleared = false;
 
-
     private int numWaves = 2;
+
+    static bool c = false;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,7 @@ public class RoomManager : MonoBehaviour
             Debug.Log(numWaves);
             roomCleared = true;
             portal.SetInteractable(true);
+            setRoomCleared();
             // activate portal
         }
         /*else // needed this other wise it would go into if for some reason
@@ -69,5 +71,15 @@ public class RoomManager : MonoBehaviour
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
             Instantiate(enemyPrefabs[randEnemy], spawnPoints[i].position, transform.rotation);
         }
+    }
+
+    public static bool getIsCleared()
+    {
+        return c;
+    }
+
+    void setRoomCleared()
+    {
+        c = true;
     }
 }
