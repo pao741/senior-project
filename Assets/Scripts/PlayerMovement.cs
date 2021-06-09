@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         player.setInvulnerable(true);
                         dashDirection = new Vector2(movement.x, movement.y).normalized;
-                        currentDashSpeed = 20f;
+                        currentDashSpeed = 15f;
                         state = State.Dash;
                     }
                 }
@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
         float DashSpeedDropMultiplier = 5f;
         currentDashSpeed -= currentDashSpeed * DashSpeedDropMultiplier * Time.deltaTime;
 
-        float dashSpeedMinimum = 10f;
+        float dashSpeedMinimum = 5f;
         /*float dashSpeedMinimumIFrame = 12f;
 
         if (currentAttackMovementSpeed < dashSpeedMinimumIFrame)

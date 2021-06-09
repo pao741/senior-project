@@ -47,6 +47,8 @@ public class EnemyAI : MonoBehaviour
     float roamTimer = 0;
     Vector3 roamPosition;
     Vector3 roamDirection;
+    Vector3 Headingto;
+
     float distanceFromRoamPosition;
 
     Seeker seeker;
@@ -100,12 +102,14 @@ public class EnemyAI : MonoBehaviour
                         }
                     }
                 }
-                seeker.StartPath(thisEnemy.position, roamPosition, OnPathComplete);
+                Headingto = roamPosition;
+                seeker.StartPath(thisEnemy.position, Headingto, OnPathComplete);
             }
             else if (!isRoaming && seeker.IsDone())
             {
                 //seeker.StartPath(thisEnemy.position, target.position, OnPathComplete);
-                seeker.StartPath(thisEnemy.position, Player.getPosition(), OnPathComplete);
+                Headingto = Player.getPosition();
+                seeker.StartPath(thisEnemy.position, Headingto, OnPathComplete);
             }
         }
 
@@ -224,12 +228,14 @@ public class EnemyAI : MonoBehaviour
 
     void setAnimation(Vector2 force) // set and flip animation
     {
-        float differenceX = thisEnemy.position.x - roamPosition.x;
-        if (force.x >= 0.01f && differenceX < 0.01)
+        //float differenceX = Mathf.Abs(rb.position.x - Headingto.x);
+        //Debug.Log(differenceX);
+        Debug.Log(force.x);
+        if (force.x >= 10f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
-        else if (force.x <= -0.01f)
+        else if (force.x <= -10f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
