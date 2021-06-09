@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player = GetComponent<Player>();
-        Debug.Log(player);
     }
 
     // Update is called once per frame

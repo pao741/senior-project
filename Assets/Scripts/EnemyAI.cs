@@ -230,7 +230,7 @@ public class EnemyAI : MonoBehaviour
     {
         //float differenceX = Mathf.Abs(rb.position.x - Headingto.x);
         //Debug.Log(differenceX);
-        Debug.Log(force.x);
+        
         if (force.x >= 10f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
@@ -264,12 +264,14 @@ public class EnemyAI : MonoBehaviour
     public void knockBack(Vector3 from)
     {
         /*float timer = 0f;*/
-        float knockbackPower = 1000f;
+        float knockbackPower = 2000f;
 
         disableMovement = true;
 
         Vector2 difference = (from - rb.transform.position).normalized;
         rb.AddForce(-difference * knockbackPower);
+
+        //rb.velocity = -difference * 5f;
 
         disableMovement = false;
     }

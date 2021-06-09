@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationHandler : MonoBehaviour
+public class MeleeAnimationHandler : MonoBehaviour
 {
     // Handle all animation event
 
-    PlayerCombatManager combatManager;
+    public PlayerCombatManager combatManager;
     PlayerMovement playerMovement;
     public GameObject gameObject;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        combatManager = gameObject.GetComponent<PlayerCombatManager>();
+        //combatManager = gameObject.GetComponent<PlayerCombatManager>();
     }
     void Update()
     {

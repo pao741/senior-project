@@ -8,7 +8,7 @@ public class PlayerCombatManager : MonoBehaviour
     public Animator animator;
 
     public Transform attackPoint;
-    public Transform player;
+    //public Transform player;
     public LayerMask enemyLayers;
 
     public int attackDamage = 40;
@@ -82,8 +82,10 @@ public class PlayerCombatManager : MonoBehaviour
                 EnemyAI enemy = collider.GetComponent<EnemyAI>();
                 if (enemy)
                 {
-                    enemy.TakeDamage(attackDamage, player);
-                    enemy.knockBack(player.position);
+                    //enemy.TakeDamage(attackDamage, player);
+                    //enemy.knockBack(player.position);
+                    enemy.TakeDamage(attackDamage, Player.playerTransform);
+                    enemy.knockBack(Player.getPosition());
                 }
             }
         }
