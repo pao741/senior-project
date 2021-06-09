@@ -22,8 +22,6 @@ public class EnemyAI : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public GameObject deathEffect;
-
     public float knockbackPower = 100f;
     public float knockbackDuration = 0.3f;
     public bool disableMovement = false;
@@ -303,7 +301,6 @@ public class EnemyAI : MonoBehaviour
     {
         isDead = true;
         animator.Play("Enemy1_death");
-        /*Instantiate(deathEffect, transform.position, Quaternion.identity);*/
         Debug.Log("It fucking dies");
         GetComponent<Collider2D>().enabled = false;
         //Physics.IgnoreCollision(theobjectToIgnore.collider, collider);
