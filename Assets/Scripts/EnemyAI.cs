@@ -244,7 +244,8 @@ public class EnemyAI : MonoBehaviour
             if (rb != null)
             {
                 /*Debug.Log("Hit");*/
-                disableMovement = true;
+                TakeDamage(40, Player.playerTransform);
+                //disableMovement = true;
                 /*Vector2 difference = (other.transform.position - rb.transform.position).normalized;
                 Debug.Log(difference);
                 rb.AddForce(-difference * knockbackPower);*/
