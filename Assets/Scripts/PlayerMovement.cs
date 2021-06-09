@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public Camera cam;
     public Transform playerGFX;
+    public Player player;
 
     [Space]
     [Header("Dash")]
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 mousePos;
     Vector2 lookDir;
 
-    Player player;
+    
 
     private enum State
     {
@@ -49,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<Player>();
     }
 
     // Update is called once per frame

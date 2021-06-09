@@ -29,7 +29,6 @@ public class AimHandler : MonoBehaviour
         //Debug.Log(Input.mouseScrollDelta.y);
         if (Input.mouseScrollDelta.y > 0f)
         {
-            Debug.Log("Up");
             aims[aimIndex].SetActive(false);
             animators[aimIndex].SetActive(false);
             aimIndex--;
@@ -42,7 +41,6 @@ public class AimHandler : MonoBehaviour
         }
         else if (Input.mouseScrollDelta.y < 0f)
         {
-            Debug.Log("Down");
             aims[aimIndex].SetActive(false);
             animators[aimIndex].SetActive(false);
             aimIndex = (aimIndex + 1) % aims.Length;
