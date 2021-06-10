@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyAnimationHandler : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform player;
     Transform playerPosition; 
     EnemyAI enemyAI;
     EnemyCombatManager enemyAttackManager;

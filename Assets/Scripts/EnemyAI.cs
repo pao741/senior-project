@@ -202,9 +202,10 @@ public class EnemyAI : MonoBehaviour
         {
             setAnimation(force);
         }
-
+        Debug.Log(isRoaming);
         if (isRoaming)
         {
+            
             Collider2D hitObject = Physics2D.OverlapCircle(roamPosition, 1f, enemyLayer);
             if (hitObject != null && hitObject.transform == thisEnemy)
             {
@@ -219,10 +220,10 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    /*void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(roamPosition, 1f);
-    }*/
+    }
 
     void setAnimation(Vector2 force) // set and flip animation
     {
