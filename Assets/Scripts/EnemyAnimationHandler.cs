@@ -60,4 +60,18 @@ public class EnemyAnimationHandler : MonoBehaviour
     {
         enemyAI.StopRigidBody();
     }
+
+    void StartAttackAnimation()
+    {
+        StopRigidBody();
+        DisableMovement();
+        RememberPlayerPosition();
+    }
+
+    void EndAttackAnimation()
+    {
+        StopRigidBody();
+        EnableMovement();
+        enemyAI.SetAnimatorAttack(false);
+    }
 }

@@ -40,7 +40,6 @@ public class RoomManager : MonoBehaviour
         }
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
         if(enemies.Length == 0 && numWaves > 0)
         {
             // spawn more enemy

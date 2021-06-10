@@ -132,7 +132,9 @@ public class EnemyAI : MonoBehaviour
 
         if (takingDamageTimer <= Time.time) // takingDamage timer
         {
+            //disableMovement = false;
             takingDamage = false;
+            animator.SetBool("Damaged", false);
         }
         
         if (roamTimer <= Time.time && reachedRoamingPath == true)
@@ -159,7 +161,8 @@ public class EnemyAI : MonoBehaviour
         if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack 
         {
             // Calling attack animation
-            animator.Play("Enemy1_attack");
+            //animator.Play("Enemy1_attack");
+            animator.SetBool("Attack", true);
         }
 
         // THIS IF STATEMENT IS VERY WEIRD (sometimes code below it doesn't even get to run)
@@ -184,7 +187,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-        if (!disableMovement)
+        if (!disableMovement && !isAttacking)
         {
             //rb.AddForce(force);
             rb.velocity = direction * 2f;
@@ -202,7 +205,6 @@ public class EnemyAI : MonoBehaviour
         {
             setAnimation(force);
         }
-        Debug.Log(isRoaming);
         if (isRoaming)
         {
             
@@ -210,7 +212,8 @@ public class EnemyAI : MonoBehaviour
             if (hitObject != null && hitObject.transform == thisEnemy)
             {
                 StopRigidBody();
-                animator.Play("Enemy1_idle");
+                //animator.Play("Enemy1_idle");
+                //animator.Play("Enemy1_idle");
                 reachedRoamingPath = true;
                 float seconds = Random.Range(3.0f, 8.0f);
                 roamTimer = Time.time + seconds;
@@ -220,21 +223,23 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    void OnDrawGizmosSelected()
+    /*void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(roamPosition, 1f);
-    }
+    }*/
 
     void setAnimation(Vector2 force) // set and flip animation
     {
         //float differenceX = Mathf.Abs(rb.position.x - Headingto.x);
         //Debug.Log(differenceX);
-        
-        if (force.x >= 10f)
+
+        //if (force.x >= 10f)
+        if (force.x >= 0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
-        else if (force.x <= -10f)
+        //else if (force.x <= -10f)
+        else if (force.x <= -0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
@@ -248,8 +253,12 @@ public class EnemyAI : MonoBehaviour
             //float timer = 0;
             if (rb != null)
             {
-                /*Debug.Log("Hit");*/
-                TakeDamage(40, Player.playerTransform);
+                //Vector2 otherPosition = other.transform.position;
+                
+                isRoaming = false;
+
+                TakeDamageWithoutAnimation(40, Player.playerTransform);
+                //knockBack(Player.getPosition());
                 //disableMovement = true;
                 /*Vector2 difference = (other.transform.position - rb.transform.position).normalized;
                 Debug.Log(difference);
@@ -263,7 +272,7 @@ public class EnemyAI : MonoBehaviour
     public void knockBack(Vector3 from)
     {
         /*float timer = 0f;*/
-        float knockbackPower = 2000f;
+        float knockbackPower = 1000f;
 
         disableMovement = true;
 
@@ -278,11 +287,21 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage, Transform source)
     {
         takingDamage = true;
-
+        //disableMovement = true;
         //SetTarget(source);
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth); // set health bar to current health
+
+        // turn to where damage is coming from
+        if (rb.position.x > source.position.x)  // from left
+        {
+            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else // from right
+        {
+            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+        }
 
         if (currentHealth <= 0)
         {
@@ -290,18 +309,30 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            animator.Play("Enemy1_damaged");
-            //animator.SetTrigger("Damaged");
+            //animator.Play("Enemy1_damaged");
+            animator.SetBool("Damaged", true);
         }
         takingDamageTimer = Time.time + 1f;
         /*Debug.Log(takingDamageTimer);*/
 
     }
 
+    public void TakeDamageWithoutAnimation(int damage, Transform source)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth); // set health bar to current health
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     void Die()
     {
         isDead = true;
-        animator.Play("Enemy1_death");
+        //animator.Play("Enemy1_death");
+        animator.SetTrigger("Death");
         Debug.Log("It fucking dies");
         GetComponent<Collider2D>().enabled = false;
         //Physics.IgnoreCollision(theobjectToIgnore.collider, collider);
@@ -341,5 +372,10 @@ public class EnemyAI : MonoBehaviour
     {
         //attackingPosition = target.position;
         attackingPosition = Player.getPosition();
+    }
+
+    public void SetAnimatorAttack(bool cond)
+    {
+        animator.SetBool("Attack", cond);
     }
 }
