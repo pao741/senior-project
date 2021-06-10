@@ -233,13 +233,13 @@ public class EnemyAI : MonoBehaviour
         //float differenceX = Mathf.Abs(rb.position.x - Headingto.x);
         //Debug.Log(differenceX);
 
-        //if (force.x >= 10f)
-        if (force.x >= 0.01f)
+        if (force.x >= 10f)
+        //if (force.x >= 0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
-        //else if (force.x <= -10f)
-        else if (force.x <= -0.01f)
+        else if (force.x <= -10f)
+        //else if (force.x <= -0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
