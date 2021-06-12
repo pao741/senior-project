@@ -48,20 +48,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Objects
+    uniqueID: 2317635743
+    locked: 0
+  - name: EnemyProjectiles
+    uniqueID: 1341657275
+    locked: 0
   - name: Enemy
     uniqueID: 2117407725
     locked: 0
-  - name: Objects
-    uniqueID: 2317635743
+  - name: Projectiles
+    uniqueID: 4249855465
     locked: 0
   - name: Player
     uniqueID: 1951308085
     locked: 0
   - name: Weapon
     uniqueID: 2461633859
-    locked: 0
-  - name: Projectiles
-    uniqueID: 4249855465
     locked: 0
   - name: UI
     uniqueID: 2353420457

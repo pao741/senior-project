@@ -35,6 +35,14 @@ public class EnemyAnimationHandler : MonoBehaviour
         enemyAI.Attack();
     }
 
+    void Shoot()
+    {
+        EnableAttacking();
+        enemyAttackManager.Shoot();
+        enemyAI.SetAttacking(true);
+        //enemyAI.Shoot();
+    }
+
     void EnableAttacking() // called when start attacking
     {
         enemyAI.SetAttacking(true);

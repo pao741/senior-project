@@ -5,9 +5,11 @@ using UnityEngine;
 public class EnemyCombatManager : MonoBehaviour
 {
     public Transform attackPoint;
+    public GameObject bulletPrefab;
     public float attackRange = 0.5f;
     public LayerMask playerLayers;
     public bool attacking = false;
+    public float bulletForce = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +57,13 @@ public class EnemyCombatManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(attackPoint.right * bulletForce, ForceMode2D.Impulse);
     }
 
     void OnDrawGizmosSelected()

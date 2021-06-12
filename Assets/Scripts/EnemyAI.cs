@@ -5,9 +5,6 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-
-    //Transform target;
-    //Transform mainTarget;
     public Transform thisEnemy;
     public Animator animator;
     public LayerMask enemyLayer;
