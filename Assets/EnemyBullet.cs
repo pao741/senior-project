@@ -6,7 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject hitEffect;
-    public float maxVelocity = 11f;
+    public float maxVelocity = 5f;
     public int damage = 40;
     void Start()
     {
@@ -23,13 +23,15 @@ public class EnemyBullet : MonoBehaviour
             if(player != null)
             {
                 player.TakeDamage(damage);
-                GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-                Destroy(effect, 1f);
-                Destroy(gameObject);
+                
             }
         }
 
-        
+        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+        Destroy(effect, 1f);
+        Destroy(gameObject);
+
+
 
     }
 }
