@@ -17,19 +17,22 @@ public class EnemyBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag != "Enemy")
         {
-            Player player = collision.collider.GetComponent<Player>();
-            if(player != null)
+            if (collision.collider.tag == "Player")
             {
-                player.TakeDamage(damage);
-                
-            }
-        }
+                Player player = collision.collider.GetComponent<Player>();
+                if (player != null)
+                {
+                    player.TakeDamage(damage);
 
-        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-        Destroy(effect, 1f);
-        Destroy(gameObject);
+                }
+            }
+
+            GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+            Destroy(effect, 1f);
+            Destroy(gameObject);
+        }
 
 
 

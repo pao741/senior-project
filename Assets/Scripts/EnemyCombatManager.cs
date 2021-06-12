@@ -11,6 +11,8 @@ public class EnemyCombatManager : MonoBehaviour
     public bool attacking = false;
     public float bulletForce = 20f;
 
+    Vector3 prevPlayerPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,8 +66,13 @@ public class EnemyCombatManager : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-        Vector2 difference = (Player.getPosition() - rb.transform.position).normalized;
+        Vector2 difference = (prevPlayerPosition - rb.transform.position).normalized;
         rb.AddForce(difference * bulletForce, ForceMode2D.Impulse);
+    }
+
+    public void SetAttackingPosition()
+    {
+        prevPlayerPosition = Player.getPosition();
     }
 
     void OnDrawGizmosSelected()

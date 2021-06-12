@@ -362,6 +362,7 @@ public class EnemyAI : MonoBehaviour
 
     public void StopRigidBody()
     {
+        Debug.Log("Stopping");
         rb.velocity = Vector3.zero;
     }
 

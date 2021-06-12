@@ -25,6 +25,7 @@ public class EnemyAnimationHandler : MonoBehaviour
     void RememberPlayerPosition()
     {
         enemyAI.SetAttackingPosition();
+        enemyAttackManager.SetAttackingPosition();
     }
 
     void Attack() // called when attack
