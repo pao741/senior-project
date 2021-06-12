@@ -10364,7 +10364,7 @@ MonoBehaviour:
   knockbackPower: 100
   knockbackDuration: 1
   disableMovement: 0
-  attackRange: 1.6
+  attackRange: 4
 --- !u!114 &478360088 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5835861577317825159, guid: 62e46805040bb494d951160f43208e2f, type: 3}
