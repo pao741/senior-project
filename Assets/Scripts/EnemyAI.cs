@@ -48,11 +48,13 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    Collider2D collider;
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         float seconds = Random.Range(1.0f, 8.0f);
@@ -362,7 +364,6 @@ public class EnemyAI : MonoBehaviour
 
     public void StopRigidBody()
     {
-        Debug.Log("Stopping");
         rb.velocity = Vector3.zero;
     }
 
@@ -375,5 +376,10 @@ public class EnemyAI : MonoBehaviour
     public void SetAnimatorAttack(bool cond)
     {
         animator.SetBool("Attack", cond);
+    }
+
+    public Collider2D getCollider()
+    {
+        return collider;
     }
 }

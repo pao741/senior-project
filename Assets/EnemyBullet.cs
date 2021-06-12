@@ -8,16 +8,24 @@ public class EnemyBullet : MonoBehaviour
     public GameObject hitEffect;
     public float maxVelocity = 5f;
     public int damage = 40;
+
+    //Collider2D collider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //collider = GetComponent<Collider2D>();
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity); /// set max velocity
 
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag != "Enemy")
+        if (collision.collider.tag == "Enemy")
+        {
+            //Physics2D.IgnoreCollision(collision.collider, collider);
+        }
+        else
         {
             if (collision.collider.tag == "Player")
             {
