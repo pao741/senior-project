@@ -63,7 +63,9 @@ public class EnemyCombatManager : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(attackPoint.right * bulletForce, ForceMode2D.Impulse);
+
+        Vector2 difference = (Player.getPosition() - rb.transform.position).normalized;
+        rb.AddForce(difference * bulletForce, ForceMode2D.Impulse);
     }
 
     void OnDrawGizmosSelected()
