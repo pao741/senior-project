@@ -80,27 +80,30 @@ public class EnemyAI : MonoBehaviour
                         roamDirection = thisEnemy.position + randomDir;
                         roamPosition = thisEnemy.position + randomDir * 5f;
 
-                        RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, randomDir, 5f); 
+                        RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, randomDir, 5f);
 
-                        /*Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
-                        Debug.Log(hit.collider.tag);*/
+                        
                         if (hit == null)
                         {
+                            Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
                             //Debug.Log("Path found");
+
+                            //Debug.Log(hit.collider.tag);
                             break;
                         }
-                        else // Doesn't hit
+                        else if (hit.collider.tag == "Walls")// Doesn't hit
                         {
                             //Debug.Log("Path not found");
-                            if (hit.collider.tag == "Walls") // if i remove this line the game crash idk why
+                            /*if (hit.collider.tag == "Walls") // if i remove this line the game crash idk why
                             {
                                 
-                            }
+                            }*/
                         }
                     }
                 }
                 Headingto = roamPosition;
-                seeker.StartPath(thisEnemy.position, Headingto, OnPathComplete);
+                seeker.StartPath((Vector2)thisEnemy.position, (Vector2)Headingto, OnPathComplete);
+
             }
             else if (!isRoaming && seeker.IsDone())
             {
@@ -222,10 +225,11 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    /*void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(roamPosition, 1f);
-    }*/
+        //Gizmos.DrawWireSphere(thisEnemy.position, 1f);
+    }
 
     void setAnimation(Vector2 force) // set and flip animation
     {
