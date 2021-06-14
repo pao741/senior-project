@@ -254,14 +254,9 @@ public class EnemyAI : MonoBehaviour
             {
                 //Vector2 otherPosition = other.transform.position;
                 
-                isRoaming = false;
+                //isRoaming = false;
 
-                TakeDamageWithoutAnimation(40, Player.playerTransform);
-                //knockBack(Player.getPosition());
-                //disableMovement = true;
-                /*Vector2 difference = (other.transform.position - rb.transform.position).normalized;
-                Debug.Log(difference);
-                rb.AddForce(-difference * knockbackPower);*/
+                //TakeDamageWithoutAnimation(40, Player.playerTransform);
 
             }
         }
@@ -381,5 +376,10 @@ public class EnemyAI : MonoBehaviour
     public Collider2D getCollider()
     {
         return collider;
+    }
+
+    public void SetIsRoaming(bool cond)
+    {
+        isRoaming = cond;
     }
 }

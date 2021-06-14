@@ -13,16 +13,16 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity); /// set max velocity
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.tag);
         EnemyAI enemy = collision.collider.GetComponent<EnemyAI>();
         if (enemy != null)
         {
-            //enemy.TakeDamage(damage);
+            enemy.SetIsRoaming(false);
+            enemy.TakeDamageWithoutAnimation(20, Player.playerTransform);
+
         }
 
         GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
