@@ -17,20 +17,26 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetButtonDown("Fire1") || Input.GetButton("Fire1")) && Time.time > nextShootTimer)
+        if (!PauseMenu.isPaused && !Player.isDead)
         {
-            isShooting = true;
-            animator.Play("Weapon1_firing");
-            Shoot();
-            Invoke("ResetShoot", fireRate);
-            nextShootTimer = Time.time + fireRate;
+            if ((Input.GetButtonDown("Fire1") || Input.GetButton("Fire1")) && Time.time > nextShootTimer)
+            {
+                isShooting = true;
+                animator.Play("Weapon1_firing");
+                Shoot();
+                Invoke("ResetShoot", fireRate);
+                nextShootTimer = Time.time + fireRate;
+            }
         }
         
     }
 
     private void FixedUpdate()
     {
-        Aim();
+        if (!PauseMenu.isPaused && !Player.isDead)
+        {
+            Aim();
+        }
     }
 
     void Shoot() 
