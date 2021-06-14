@@ -222,10 +222,10 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    /*void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(roamPosition, 1f);
-    }*/
+    }
 
     void setAnimation(Vector2 force) // set and flip animation
     {
