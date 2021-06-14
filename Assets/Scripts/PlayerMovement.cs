@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
                 }
 
-                if (Input.GetButtonDown("Jump") && Time.time > nextDashTimer)
+                /*if (Input.GetButtonDown("Jump") && Time.time > nextDashTimer) // dash (don't have a use for it)
                 {
                     if (movement.x != 0 || movement.y != 0)
                     {
@@ -93,9 +93,9 @@ public class PlayerMovement : MonoBehaviour
                         currentDashSpeed = 15f;
                         state = State.Dash;
                     }
-                }
+                }*/
 
-                /*if (Input.GetButtonDown("Fire1"))
+                /*if (Input.GetButtonDown("Fire1")) // move toward attacking position (don't have a use for it)
                 {
                     attackDirection = lookDir;
                     currentAttackMovementSpeed = 20f;
