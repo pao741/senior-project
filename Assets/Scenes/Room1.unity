@@ -11782,6 +11782,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 256105825, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6615614522939566688, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
       propertyPath: healthBar
       value: 
@@ -11869,6 +11873,22 @@ PrefabInstance:
     - target: {fileID: 6615614522939566702, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615614522939566703, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+      propertyPath: m_Size.x
+      value: 0.47187656
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615614522939566703, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7363309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615614522939566703, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.009338766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615614522939566703, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0062918365
       objectReference: {fileID: 0}
     - target: {fileID: 6615614524860214498, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
       propertyPath: m_Name
