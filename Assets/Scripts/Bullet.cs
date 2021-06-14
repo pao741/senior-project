@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.collider.tag);
         EnemyAI enemy = collision.collider.GetComponent<EnemyAI>();
         if (enemy != null)
         {
