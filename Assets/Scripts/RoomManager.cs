@@ -68,7 +68,7 @@ public class RoomManager : MonoBehaviour
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[i].position, transform.rotation);
+            Instantiate(enemyPrefabs[randEnemy], spawnPoints[i].position, Quaternion.identity);
         }
     }
 

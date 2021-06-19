@@ -85,7 +85,7 @@ public class EnemyAI : MonoBehaviour
                         
                         if (hit == null)
                         {
-                            Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
+                            //Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
                             //Debug.Log("Path found");
 
                             //Debug.Log(hit.collider.tag);
@@ -162,9 +162,12 @@ public class EnemyAI : MonoBehaviour
 
         if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack 
         {
-            // Calling attack animation
-            //animator.Play("Enemy1_attack");
-            animator.SetBool("Attack", true);
+            RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, -(thisEnemy.position - Player.getPosition()).normalized, 5f);
+            //Debug.DrawRay(thisEnemy.position, -(thisEnemy.position - Player.getPosition()).normalized * attackRange, Color.white, 4f);
+            if(hit.collider.tag == "Player")
+            {
+                animator.SetBool("Attack", true);
+            }
         }
 
         // THIS IF STATEMENT IS VERY WEIRD (sometimes code below it doesn't even get to run)
@@ -227,7 +230,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(roamPosition, 1f);
+        //Gizmos.DrawWireSphere(Headingto, 1f);
         //Gizmos.DrawWireSphere(thisEnemy.position, 1f);
     }
 
@@ -285,7 +288,7 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage, Transform source)
     {
         takingDamage = true;
-        disableMovement = true;
+        //disableMovement = true;
         //SetTarget(source);
         currentHealth -= damage;
 
