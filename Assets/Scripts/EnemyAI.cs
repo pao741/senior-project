@@ -285,7 +285,7 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage, Transform source)
     {
         takingDamage = true;
-        //disableMovement = true;
+        disableMovement = true;
         //SetTarget(source);
         currentHealth -= damage;
 
