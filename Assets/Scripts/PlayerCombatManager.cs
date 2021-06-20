@@ -25,10 +25,12 @@ public class PlayerCombatManager : MonoBehaviour
 
     public int maxDurability = 100;
     public int currentDurability;
+    public string durabilityText = "100%";
 
     void Start()
     {
         currentDurability = maxDurability;
+        UpdateText();
     }
 
     void Update()
@@ -97,6 +99,7 @@ public class PlayerCombatManager : MonoBehaviour
                     currentDurability -= 5;
                 }
             }
+            UpdateText();
         }
     }
 
@@ -109,7 +112,21 @@ public class PlayerCombatManager : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }*/
 
-    
+    public void Refill()
+    {
+        currentDurability += maxDurability/2;
+        if (currentDurability > maxDurability)
+        {
+            currentDurability = maxDurability;
+        }
+        //Reload();
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+        durabilityText= currentDurability.ToString() + "%";
+    }
 
     void Aim()
     {

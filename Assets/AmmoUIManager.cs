@@ -9,6 +9,7 @@ public class AmmoUIManager : MonoBehaviour
     public GameObject meleeManagerObject;
     public GameObject shootingManagerObject;
     public AmmoBar ammoBar;
+    public TextMeshProUGUI weaponName;
     PlayerCombatManager meleeManager;
     Shooting shootingManager;
 
@@ -19,39 +20,35 @@ public class AmmoUIManager : MonoBehaviour
     {
         meleeManager = meleeManagerObject.GetComponent<PlayerCombatManager>();
         shootingManager = shootingManagerObject.GetComponent<Shooting>();
-        //ammoBar.SetMaxAmmo(shootingManager.magazineSize);
-        //ammoBar.SetMaxAmmo(10);
         ammoText.text = shootingManager.bulletText;
-        //SetRangeBulletUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(shootingManager.magazineSize);
         if (meleeManagerObject.activeSelf)
         {
-            //Debug.Log("Melee");
+            SetMeleeDurabilityUI();
+            ammoText.text = meleeManager.durabilityText;
+            weaponName.text = "Sword";
         }
         else
         {
-            ammoBar.SetAmmo(shootingManager.currentMagazineCount);
-            //SetRangeBulletUI();
+            SetRangeBulletUI();
+            ammoText.text = shootingManager.bulletText;
+            weaponName.text = "Gun";
         }
-        ammoText.text = shootingManager.bulletText;
     }
 
     void SetRangeBulletUI()
     {
+        ammoBar.SetMaxAmmo(shootingManager.magazineSize);
         ammoBar.SetAmmo(shootingManager.currentMagazineCount);
-        //ammoBar.SetMaxAmmo(10);
-        //ammoBar.SetMaxAmmo(shootingManager.magazineSize);
-        //Debug.Log(shootingManager.magazineSize == 10);
     }
 
     void SetMeleeDurabilityUI()
     {
-        //ammoBar.SetAmmo(shootingManager.currentMagazineCount);
-        //ammoBar.SetMaxAmmo(100);
+        ammoBar.SetMaxAmmo(meleeManager.maxDurability);
+        ammoBar.SetAmmo(meleeManager.currentDurability);
     }
 }

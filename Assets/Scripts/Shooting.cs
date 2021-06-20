@@ -50,6 +50,11 @@ public class Shooting : MonoBehaviour
                     nextShootTimer = Time.time + fireRate;
                 }
             }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
+                nextShootTimer = Time.time + fireRate;
+            }
         }
         
     }
@@ -94,10 +99,10 @@ public class Shooting : MonoBehaviour
 
     public void Refill()
     {
-        currentTotalBullet += 25;
-        if (currentTotalBullet > 50)
+        currentTotalBullet += maxTotalBullet/2;
+        if (currentTotalBullet > maxTotalBullet)
         {
-            currentTotalBullet = 50;
+            currentTotalBullet = maxTotalBullet;
         }
         Reload();
         UpdateText();
