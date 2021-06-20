@@ -95,7 +95,12 @@ public class Shooting : MonoBehaviour
     public void Refill()
     {
         currentTotalBullet += 25;
+        if (currentTotalBullet > 50)
+        {
+            currentTotalBullet = 50;
+        }
         Reload();
+        UpdateText();
     }
 
     void UpdateText()
