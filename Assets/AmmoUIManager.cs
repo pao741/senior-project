@@ -19,20 +19,39 @@ public class AmmoUIManager : MonoBehaviour
     {
         meleeManager = meleeManagerObject.GetComponent<PlayerCombatManager>();
         shootingManager = shootingManagerObject.GetComponent<Shooting>();
+        //ammoBar.SetMaxAmmo(shootingManager.magazineSize);
+        //ammoBar.SetMaxAmmo(10);
         ammoText.text = shootingManager.bulletText;
-        ammoBar.SetAmmo(10);
-        ammoBar.SetMaxAmmo(10);
+        //SetRangeBulletUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(ShootingManager.currentMagazineCount);
-        ammoBar.SetAmmo(shootingManager.currentMagazineCount);
-        //ammoBar.SetMaxAmmo(ShootingManager.magazineSize);
+        //Debug.Log(shootingManager.magazineSize);
+        if (meleeManagerObject.activeSelf)
+        {
+            //Debug.Log("Melee");
+        }
+        else
+        {
+            ammoBar.SetAmmo(shootingManager.currentMagazineCount);
+            //SetRangeBulletUI();
+        }
         ammoText.text = shootingManager.bulletText;
-        //Debug.Log(ShootingManager.currentMagazineCount);
-        //Debug.Log(ShootingManager.magazineSize);
-        //Debug.Log(ShootingManager.bulletText);
+    }
+
+    void SetRangeBulletUI()
+    {
+        ammoBar.SetAmmo(shootingManager.currentMagazineCount);
+        //ammoBar.SetMaxAmmo(10);
+        //ammoBar.SetMaxAmmo(shootingManager.magazineSize);
+        //Debug.Log(shootingManager.magazineSize == 10);
+    }
+
+    void SetMeleeDurabilityUI()
+    {
+        //ammoBar.SetAmmo(shootingManager.currentMagazineCount);
+        //ammoBar.SetMaxAmmo(100);
     }
 }

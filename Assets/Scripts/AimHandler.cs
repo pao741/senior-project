@@ -22,7 +22,6 @@ public class AimHandler : MonoBehaviour
             aims[i].SetActive(false);
             animators[i].SetActive(false);
         }
-        
     }
 
     // Update is called once per frame

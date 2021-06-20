@@ -23,12 +23,11 @@ public class PlayerCombatManager : MonoBehaviour
 
     float lastAttack = 0;
 
-    public int maxDurability;
+    public int maxDurability = 100;
     public int currentDurability;
 
     void Start()
     {
-        maxDurability = 100;
         currentDurability = maxDurability;
     }
 

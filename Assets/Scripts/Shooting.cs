@@ -17,7 +17,7 @@ public class Shooting : MonoBehaviour
 
     public int maxTotalBullet;
     public int currentTotalBullet;
-    public int magazineSize;
+    public int magazineSize = 10;
     public int currentMagazineCount;
     public string bulletText = "10/100";
 
