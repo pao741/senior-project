@@ -79,7 +79,7 @@ public class Portal : MonoBehaviour
     void Destroy()
     {
         /*Instantiate(deathEffect, transform.position, Quaternion.identity);*/
-        Debug.Log("The portal fucking explodes");
+        //Debug.Log("The portal fucking explodes");
         Destroy(gameObject);
     }
 

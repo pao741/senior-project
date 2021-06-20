@@ -7,6 +7,8 @@ public class AimHandler : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] aims;
     public GameObject[] animators;
+    PlayerCombatManager meleeManager;
+    Shooting shootingManager;
     private int aimIndex;
 
 
@@ -46,6 +48,20 @@ public class AimHandler : MonoBehaviour
             aimIndex = (aimIndex + 1) % aims.Length;
             aims[aimIndex].SetActive(true);
             animators[aimIndex].SetActive(true);
+        }
+    }
+
+    public void Refill()
+    {
+        meleeManager = aims[aimIndex].GetComponent<PlayerCombatManager>();
+        shootingManager = aims[aimIndex].GetComponent<Shooting>();
+        if (meleeManager)
+        {
+
+        }
+        else
+        {
+            shootingManager.Refill();
         }
     }
 }

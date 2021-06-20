@@ -15,17 +15,40 @@ public class Shooting : MonoBehaviour
     private float nextShootTimer;
     private bool isShooting;
 
+    public int maxTotalBullet;
+    public int currentTotalBullet;
+    public int magazineSize;
+    public int currentMagazineCount;
+    public string bulletText = "10/100";
+
+    void Start()
+    {
+        maxTotalBullet = 50;
+        currentTotalBullet = maxTotalBullet;
+        magazineSize = 10;
+        currentMagazineCount = magazineSize;
+        UpdateText();
+    }
+
     void Update()
     {
         if (!PauseMenu.isPaused && !Player.isDead)
         {
             if ((Input.GetButtonDown("Fire1") || Input.GetButton("Fire1")) && Time.time > nextShootTimer)
             {
-                isShooting = true;
-                animator.Play("Weapon1_firing");
-                Shoot();
-                Invoke("ResetShoot", fireRate);
-                nextShootTimer = Time.time + fireRate;
+                if (currentMagazineCount > 0)
+                {
+                    isShooting = true;
+                    animator.Play("Weapon1_firing");
+                    Shoot();
+                    Invoke("ResetShoot", fireRate);
+                    nextShootTimer = Time.time + fireRate;
+                }
+                else
+                {
+                    Reload();
+                    nextShootTimer = Time.time + fireRate;
+                }
             }
         }
         
@@ -41,15 +64,43 @@ public class Shooting : MonoBehaviour
 
     void Shoot() 
     {
+        currentMagazineCount -= 1;
+        currentTotalBullet -= 1;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+        UpdateText();
     }
 
     void ResetShoot()
     {
         isShooting = false;
         animator.Play("Weapon1_idle");
+    }
+
+    void Reload()
+    {
+        int missingFromMag = magazineSize - currentMagazineCount;
+        if (missingFromMag < currentTotalBullet)
+        {
+            currentMagazineCount = magazineSize;
+        }
+        else
+        {
+            currentMagazineCount = currentTotalBullet;
+        }
+        UpdateText();
+    }
+
+    public void Refill()
+    {
+        currentTotalBullet += 25;
+        Reload();
+    }
+
+    void UpdateText()
+    {
+        bulletText = currentTotalBullet.ToString() + "/" + maxTotalBullet.ToString();
     }
 
     void Aim()

@@ -30,6 +30,7 @@ public class Battery : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //also give player battery
+
                 Destroy();
 
             }

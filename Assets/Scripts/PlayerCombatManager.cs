@@ -23,6 +23,15 @@ public class PlayerCombatManager : MonoBehaviour
 
     float lastAttack = 0;
 
+    public int maxDurability;
+    public int currentDurability;
+
+    void Start()
+    {
+        maxDurability = 100;
+        currentDurability = maxDurability;
+    }
+
     void Update()
     {
         if(Time.time >= nextAttackTime)
@@ -86,6 +95,7 @@ public class PlayerCombatManager : MonoBehaviour
                     //enemy.knockBack(player.position);
                     enemy.TakeDamage(attackDamage, Player.playerTransform);
                     enemy.knockBack(Player.getPosition());
+                    currentDurability -= 5;
                 }
             }
         }

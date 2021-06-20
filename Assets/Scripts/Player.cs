@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public GameObject DeathMessage;
 
     public static Transform playerTransform;
+    static AimHandler aimHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         playerTransform = GetComponent<Player>().transform;
+        aimHandler = GetComponent<AimHandler>();
     }
 
     // Update is called once per frame
@@ -71,5 +73,10 @@ public class Player : MonoBehaviour
     public static Vector3 getPosition()
     {
         return playerTransform.position;
+    }
+
+    public static void Refill()
+    {
+        aimHandler.Refill();
     }
 }
