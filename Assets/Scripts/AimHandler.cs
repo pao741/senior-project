@@ -50,17 +50,20 @@ public class AimHandler : MonoBehaviour
         }
     }
 
-    public void Refill()
+    public bool Refill()
     {
         meleeManager = aims[aimIndex].GetComponent<PlayerCombatManager>();
         shootingManager = aims[aimIndex].GetComponent<Shooting>();
-        if (meleeManager)
+        if (meleeManager && !meleeManager.IsFull())
         {
             meleeManager.Refill();
+            return true;
         }
-        else
+        else if(shootingManager && !shootingManager.IsFull())
         {
             shootingManager.Refill();
+            return true;
         }
+        return false;
     }
 }

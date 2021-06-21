@@ -29,10 +29,10 @@ public class Battery : MonoBehaviour
             interactingMessage.SetActive(true);
 
             actionText.text = message;
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && Player.Refill())
             {
                 //also give player battery
-                Player.Refill();
+                
                 interactingMessage.SetActive(false);
                 GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0,0.5f,0), transform.rotation);
                 Destroy(refillText, 2f);

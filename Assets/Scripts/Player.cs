@@ -75,8 +75,8 @@ public class Player : MonoBehaviour
         return playerTransform.position;
     }
 
-    public static void Refill()
+    public static bool Refill()
     {
-        aimHandler.Refill();
+        return aimHandler.Refill();
     }
 }

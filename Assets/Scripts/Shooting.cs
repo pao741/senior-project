@@ -114,6 +114,11 @@ public class Shooting : MonoBehaviour
         bulletText = currentTotalBullet.ToString() + "/" + maxTotalBullet.ToString();
     }
 
+    public bool IsFull()
+    {
+        return currentTotalBullet == maxTotalBullet;
+    }
+
     void Aim()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

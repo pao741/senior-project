@@ -143,6 +143,11 @@ public class PlayerCombatManager : MonoBehaviour
         }
     }
 
+    public bool IsFull()
+    {
+        return currentDurability == maxDurability;
+    }
+
     void Aim()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
