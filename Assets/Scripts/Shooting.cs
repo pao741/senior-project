@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
     public int magazineSize = 10;
     public int currentMagazineCount;
     public string bulletText = "10/100";
+    public string name = "Gun";
 
     void Start()
     {

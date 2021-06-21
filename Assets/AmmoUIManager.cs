@@ -30,13 +30,13 @@ public class AmmoUIManager : MonoBehaviour
         {
             SetMeleeDurabilityUI();
             ammoText.text = meleeManager.durabilityText;
-            weaponName.text = "Sword";
+            weaponName.text = meleeManager.name;
         }
         else
         {
             SetRangeBulletUI();
             ammoText.text = shootingManager.bulletText;
-            weaponName.text = "Gun";
+            weaponName.text = shootingManager.name;
         }
     }
 

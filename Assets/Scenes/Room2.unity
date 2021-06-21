@@ -617,6 +617,26 @@ PrefabInstance:
       propertyPath: shootingManagerObject
       value: 
       objectReference: {fileID: 1091246077}
+    - target: {fileID: 1219957001, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736927455, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -345.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736927456, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: m_text
+      value: Broken Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736927456, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: m_margin.w
+      value: -48.237865
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736927456, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5835861576341138610, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

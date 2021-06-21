@@ -26,6 +26,7 @@ public class PlayerCombatManager : MonoBehaviour
     public int maxDurability = 100;
     public int currentDurability;
     public string durabilityText = "100%";
+    public string name = "sword";
 
     void Start()
     {
@@ -97,6 +98,10 @@ public class PlayerCombatManager : MonoBehaviour
                     enemy.TakeDamage(attackDamage, Player.playerTransform);
                     enemy.knockBack(Player.getPosition());
                     currentDurability -= 5;
+                    if (currentDurability < 0)
+                    {
+                        currentDurability = 0;
+                    }
                 }
             }
             UpdateText();
@@ -126,6 +131,16 @@ public class PlayerCombatManager : MonoBehaviour
     void UpdateText()
     {
         durabilityText= currentDurability.ToString() + "%";
+        if(currentDurability <= 0)
+        {
+            name = "Broken Sword";
+            attackDamage = 20;
+        }
+        else
+        {
+            name = "Sword";
+            attackDamage = 40;
+        }
     }
 
     void Aim()
