@@ -8,10 +8,11 @@ public class Battery : MonoBehaviour
 {
     // Start is called before the first frame update
     public float interactingRange = 1f;
-
+    public Animator batteryAnimator;
     public GameObject interactingMessage;
     public TextMeshProUGUI actionText;
     private string message = "pick up battery";
+    public GameObject refillTextUIPrefab;
 
     private bool interactable = true;
 
@@ -24,6 +25,7 @@ public class Battery : MonoBehaviour
     {
         if (CheckPlayerInRange() && interactable)
         {
+            batteryAnimator.SetBool("inRange", true);
             interactingMessage.SetActive(true);
 
             actionText.text = message;
@@ -32,12 +34,15 @@ public class Battery : MonoBehaviour
                 //also give player battery
                 Player.Refill();
                 interactingMessage.SetActive(false);
+                GameObject refillText = Instantiate(refillTextUIPrefab, transform.position, transform.rotation);
+                Destroy(refillText, 2f);
                 Destroy();
 
             }
         }
         else
         {
+            batteryAnimator.SetBool("inRange", false);
             interactingMessage.SetActive(false);
         }
     }
