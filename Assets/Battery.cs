@@ -34,7 +34,7 @@ public class Battery : MonoBehaviour
                 //also give player battery
                 Player.Refill();
                 interactingMessage.SetActive(false);
-                GameObject refillText = Instantiate(refillTextUIPrefab, transform.position, transform.rotation);
+                GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0,0.5f,0), transform.rotation);
                 Destroy(refillText, 2f);
                 Destroy();
 
