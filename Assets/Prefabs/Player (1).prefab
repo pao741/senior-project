@@ -404,6 +404,12 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7057268276538696351, guid: bd4cab26f6667b64f8b261f2a5b1a38a, type: 3}
   fireRate: 0.35
   bulletForce: 20
+  maxTotalBullet: 0
+  currentTotalBullet: 0
+  magazineSize: 10
+  currentMagazineCount: 0
+  bulletText: 10/100
+  name: Gun
 --- !u!212 &1872648808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -634,10 +640,7 @@ GameObject:
   - component: {fileID: 6615614522939566690}
   - component: {fileID: 6615614522939566691}
   - component: {fileID: 6615614522939566700}
-  - component: {fileID: 6615614522939566701}
-  - component: {fileID: 6615614522939566702}
   - component: {fileID: 6615614522939566703}
-  - component: {fileID: 6615614522939566689}
   - component: {fileID: 6615614522939566688}
   - component: {fileID: 254782626}
   - component: {fileID: 254782633}
@@ -739,45 +742,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6615614522939566701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615614522939566696}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 689ccd013ca72004984a0da65bd33418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  rb: {fileID: 6615614522939566700}
-  animator: {fileID: 6615614522939566702}
-  cam: {fileID: 0}
-  playerGFX: {fileID: 6615614522939566690}
-  player: {fileID: 0}
-  dashCooldown: 0.6
-  dashSpeed: 20
---- !u!95 &6615614522939566702
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615614522939566696}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e03eb6c7a37194f49bc6a6a12c4899bc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &6615614522939566703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -791,7 +755,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009338766, y: -0.0062918365}
+  m_Offset: {x: 0.0018111616, y: -0.008075029}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -802,22 +766,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47187656, y: 0.7363309}
+  m_Size: {x: 0.41778854, y: 0.6711497}
   m_EdgeRadius: 0
---- !u!114 &6615614522939566689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615614522939566696}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36efcce6171b0f14cbd741f8668e8b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combatManager: {fileID: 0}
-  gameObject: {fileID: 6615614524860214498}
 --- !u!114 &6615614522939566688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,3 +950,7 @@ MonoBehaviour:
   attackRange: 0.5
   attackRate: 2
   attackSeq: 0
+  maxDurability: 100
+  currentDurability: 0
+  durabilityText: 100%
+  name: sword

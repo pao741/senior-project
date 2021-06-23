@@ -24,7 +24,7 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        maxTotalBullet = 50;
+        maxTotalBullet = 30;
         currentTotalBullet = maxTotalBullet;
         magazineSize = 10;
         currentMagazineCount = magazineSize;

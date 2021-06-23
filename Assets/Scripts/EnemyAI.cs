@@ -349,8 +349,7 @@ public class EnemyAI : MonoBehaviour
         float lower = (ammoPercentage < durabilityPercentage) ? ammoPercentage : durabilityPercentage;
         float random = Random.Range(0f, 1f);
         float dropProbability = 0.2f * (1 - lower); // max drop change of 20% 
-        //if(random <= dropProbability)
-        if(true)
+        if(random <= dropProbability)
         {
             GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
         }

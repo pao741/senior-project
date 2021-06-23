@@ -39,7 +39,6 @@ public class EnemyCombatManager : MonoBehaviour
             if (collider.tag == "Player"){
                 // despite being called multiple time, player are granted iframe
                 // to prevent player taking damage too rapidly
-                Debug.Log("Hit player");
                 int attackDamage = 40;
                 Player player = collider.GetComponent<Player>();
                 if (player)

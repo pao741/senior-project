@@ -43,13 +43,10 @@ public class RoomManager : MonoBehaviour
         if(enemies.Length == 0 && numWaves > 0)
         {
             // spawn more enemy
-            Debug.Log(numWaves);
             SpawnFromAllPoints();
             numWaves--;
         }else if(enemies.Length == 0 && numWaves == 0)
         {
-            Debug.Log(enemies.Length);
-            Debug.Log(numWaves);
             roomCleared = true;
             portal.SetInteractable(true);
             setRoomCleared();
