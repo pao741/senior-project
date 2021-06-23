@@ -338,6 +338,7 @@ public class EnemyAI : MonoBehaviour
         //Physics.IgnoreCollision(theobjectToIgnore.collider, collider);
         healthBar.Destroy();
         gameObject.tag = "Corpse";
+        DropBattery();
         Destroy(gameObject, 10f);
     }
 

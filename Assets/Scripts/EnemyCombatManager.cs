@@ -47,17 +47,6 @@ public class EnemyCombatManager : MonoBehaviour
                     player.TakeDamage(attackDamage);
                 }
             }
-
-            if (collider.tag == "Portal")
-            {
-                Debug.Log("Hit Portal");
-                int attackDamage = 40;
-                Portal portal = collider.GetComponent<Portal>();
-                if (portal)
-                {
-                    portal.TakeDamage(attackDamage);
-                }
-            }
         }
     }
 
