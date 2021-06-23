@@ -79,4 +79,14 @@ public class Player : MonoBehaviour
     {
         return aimHandler.Refill();
     }
+
+    public static float GetAmmoCountPercentage()
+    {
+        return aimHandler.GetAmmoCountPercentage();
+    }
+
+    public static float GetSwordDurabilityPercentage()
+    {
+        return aimHandler.GetSwordDurabilityPercentage();
+    }
 }

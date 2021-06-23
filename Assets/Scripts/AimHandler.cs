@@ -14,6 +14,8 @@ public class AimHandler : MonoBehaviour
 
     void Start()
     {
+        meleeManager = aims[1].GetComponent<PlayerCombatManager>();
+        shootingManager = aims[0].GetComponent<Shooting>();
         aimIndex = 0;
         aims[0].SetActive(true);
         animators[0].SetActive(true);
@@ -52,8 +54,8 @@ public class AimHandler : MonoBehaviour
 
     public bool Refill()
     {
-        meleeManager = aims[aimIndex].GetComponent<PlayerCombatManager>();
-        shootingManager = aims[aimIndex].GetComponent<Shooting>();
+        //meleeManager = aims[aimIndex].GetComponent<PlayerCombatManager>();
+        //shootingManager = aims[aimIndex].GetComponent<Shooting>();
         if (meleeManager && !meleeManager.IsFull())
         {
             meleeManager.Refill();
@@ -65,5 +67,17 @@ public class AimHandler : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public float GetAmmoCountPercentage()
+    {
+        float gunAmmoPercentage = (float)shootingManager.currentTotalBullet / (float)shootingManager.maxTotalBullet;
+        return gunAmmoPercentage;
+    }
+
+    public float GetSwordDurabilityPercentage()
+    {
+        float swordDurabilityPercentage = (float)meleeManager.currentDurability / (float)meleeManager.maxDurability;
+        return swordDurabilityPercentage;
     }
 }

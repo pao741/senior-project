@@ -579,6 +579,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  batteryPrefab: {fileID: 6631194611257781881, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}
   speed: 2000
   nextWayPointDistance: 3
   enemyGFX: {fileID: 8769901451009862038}

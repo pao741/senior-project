@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     public Transform thisEnemy;
     public Animator animator;
     public LayerMask enemyLayer;
+    public GameObject batteryPrefab;
 
     public float speed = 100f;
     public float nextWayPointDistance = 3f;
@@ -131,7 +132,6 @@ public class EnemyAI : MonoBehaviour
         {
             return;
         }
-
         if (takingDamageTimer <= Time.time) // takingDamage timer
         {
             //disableMovement = false;
@@ -334,13 +334,25 @@ public class EnemyAI : MonoBehaviour
         isDead = true;
         //animator.Play("Enemy1_death");
         animator.SetTrigger("Death");
-        Debug.Log("It fucking dies");
         GetComponent<Collider2D>().enabled = false;
         //Physics.IgnoreCollision(theobjectToIgnore.collider, collider);
-        healthBar.Destroy(); //Destroy(healthBar);
+        healthBar.Destroy();
         gameObject.tag = "Corpse";
-
         Destroy(gameObject, 10f);
+    }
+
+    void DropBattery()
+    {
+        float ammoPercentage = Player.GetAmmoCountPercentage();
+        float durabilityPercentage = Player.GetSwordDurabilityPercentage();
+        float lower = (ammoPercentage < durabilityPercentage) ? ammoPercentage : durabilityPercentage;
+        float random = Random.Range(0f, 1f);
+        float dropProbability = 0.2f * (1 - lower); // max drop change of 20% 
+        //if(random <= dropProbability)
+        if(true)
+        {
+            GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
+        }
     }
 
     public void Attack()

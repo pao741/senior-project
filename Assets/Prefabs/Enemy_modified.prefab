@@ -75,11 +75,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 5280932793467101336}
+  bulletPrefab: {fileID: 0}
   attackRange: 0.3700568
   playerLayers:
     serializedVersion: 2
     m_Bits: 256
   attacking: 0
+  bulletForce: 20
 --- !u!1 &5881578513262973157
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +153,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117407725
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -971380471989021944, guid: 6f39f21014b21dd429dec7932be5e4f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -195,7 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4461c7b260184e84eae12f0515b5dc25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   AttackObject: {fileID: 5280932793713498019}
 --- !u!1 &5881578513339129488
 GameObject:
@@ -290,19 +291,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390716d337ad79e4db02cae1c90dcf4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   thisEnemy: {fileID: 5881578513339129499}
   animator: {fileID: 6725142585886627250}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  batteryPrefab: {fileID: 6631194611257781881, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}
   speed: 2000
   nextWayPointDistance: 3
   enemyGFX: {fileID: 5881578513262973156}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 6725142585175738918}
-  deathEffect: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
   disableMovement: 0
