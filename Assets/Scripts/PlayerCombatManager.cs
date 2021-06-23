@@ -96,7 +96,7 @@ public class PlayerCombatManager : MonoBehaviour
                     //enemy.TakeDamage(attackDamage, player);
                     //enemy.knockBack(player.position);
                     enemy.TakeDamage(attackDamage, Player.playerTransform);
-                    enemy.knockBack(Player.getPosition());
+                    enemy.knockBack(Player.GetPosition());
                     currentDurability -= 5;
                     if (currentDurability < 0)
                     {

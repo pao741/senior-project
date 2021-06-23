@@ -60,7 +60,7 @@ public class EnemyCombatManager : MonoBehaviour
 
     public void SetAttackingPosition()
     {
-        prevPlayerPosition = Player.getPosition();
+        prevPlayerPosition = Player.GetPosition();
     }
 
     void OnDrawGizmosSelected()

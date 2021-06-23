@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         invulnerable = cond;
     }
 
-    public static Vector3 getPosition()
+    public static Vector3 GetPosition()
     {
         return playerTransform.position;
     }

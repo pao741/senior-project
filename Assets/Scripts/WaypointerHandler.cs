@@ -16,7 +16,7 @@ public class WaypointerHandler : MonoBehaviour
     void Update()
     {
         if (RoomManager.getIsCleared()) {
-            float distance = Vector2.Distance(Player.getPosition(), Portal.getPosition());
+            float distance = Vector2.Distance(Player.GetPosition(), Portal.getPosition());
             if (distance < 2f)
             {
                 waypoint.SetActive(false);

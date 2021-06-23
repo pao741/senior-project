@@ -92,7 +92,7 @@ public class Portal : MonoBehaviour
 
     public bool CheckPlayerInRange()
     {
-        float distanceFromPlayer = Vector3.Distance(player.position, rb.position);
+        float distanceFromPlayer = Vector3.Distance(Player.GetPosition(), rb.position);
         return distanceFromPlayer <= interactingRange;
     }
 

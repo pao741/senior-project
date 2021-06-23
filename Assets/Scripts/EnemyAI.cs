@@ -109,7 +109,7 @@ public class EnemyAI : MonoBehaviour
             else if (!isRoaming && seeker.IsDone())
             {
                 //seeker.StartPath(thisEnemy.position, target.position, OnPathComplete);
-                Headingto = Player.getPosition();
+                Headingto = Player.GetPosition();
                 seeker.StartPath(thisEnemy.position, Headingto, OnPathComplete);
             }
         }
@@ -151,7 +151,7 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        float far = Vector3.Distance(Player.getPosition(), thisEnemy.position);
+        float far = Vector3.Distance(Player.GetPosition(), thisEnemy.position);
         
         if (far <= 5f && isRoaming) // check if can attack (Must come before check for the end of path)
         {
@@ -162,7 +162,7 @@ public class EnemyAI : MonoBehaviour
 
         if (far <= attackRange && !takingDamage && !isRoaming) // check if can attack 
         {
-            RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, -(thisEnemy.position - Player.getPosition()).normalized, 5f);
+            RaycastHit2D hit = Physics2D.Raycast(thisEnemy.position, -(thisEnemy.position - Player.GetPosition()).normalized, 5f);
             //Debug.DrawRay(thisEnemy.position, -(thisEnemy.position - Player.getPosition()).normalized * attackRange, Color.white, 4f);
             if(hit.collider.tag == "Player")
             {
@@ -384,7 +384,7 @@ public class EnemyAI : MonoBehaviour
     public void SetAttackingPosition()
     {
         //attackingPosition = target.position;
-        attackingPosition = Player.getPosition();
+        attackingPosition = Player.GetPosition();
     }
 
     public void SetAnimatorAttack(bool cond)

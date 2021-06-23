@@ -25,7 +25,7 @@ public class WayPointer : MonoBehaviour
         targetPosition = target.position;
         Vector3 toPosition = target.position;
         //Vector3 fromPosition = Camera.main.transform.position;
-        Vector3 fromPosition = Player.getPosition();
+        Vector3 fromPosition = Player.GetPosition();
         fromPosition.z = 0f;
         Vector3 difference = (toPosition - fromPosition).normalized;
         float angle = (Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg) % 360;

@@ -62,7 +62,7 @@ public class Battery : MonoBehaviour
 
     public bool CheckPlayerInRange()
     {
-        float distanceFromPlayer = Vector3.Distance(Player.getPosition(), transform.position);
+        float distanceFromPlayer = Vector3.Distance(Player.GetPosition(), transform.position);
         return distanceFromPlayer <= interactingRange;
     }
 }
