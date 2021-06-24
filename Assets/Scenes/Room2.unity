@@ -5217,6 +5217,7 @@ GameObject:
   - component: {fileID: 1168620165}
   - component: {fileID: 1168620164}
   - component: {fileID: 1168620163}
+  - component: {fileID: 1168620166}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5272,6 +5273,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168620166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168620162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7d57c35fa84ad428552828446767b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasPrefab: {fileID: 1611632475707452891, guid: 62e46805040bb494d951160f43208e2f, type: 3}
 --- !u!1001 &1230752121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5369,7 +5383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611632475707452891, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1611632475842409244, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: meleeManagerObject
@@ -5381,11 +5395,11 @@ PrefabInstance:
       objectReference: {fileID: 1091246077}
     - target: {fileID: 1611632476709183205, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1611632476709183205, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1611632476738612220, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_IsActive
@@ -5393,11 +5407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5963750667731699040, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 5963750667731699040, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5963750667747474005, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_Value

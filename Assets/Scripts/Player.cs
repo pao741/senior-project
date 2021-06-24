@@ -26,8 +26,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         isDead = false;
-        //healthBar = healthBarObject.GetComponent<HealthBar>();
+        //healthBar = healthBarObject.GetComponent<HealthBar>(); 
         healthBarObject = GameObject.Find("/Canvas (1)/InGameUI/HealthBar/");
+        //healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
