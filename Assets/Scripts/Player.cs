@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class Player : MonoBehaviour
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        //EditorUtility.SetDirty(yourScript);
+        //EditorSceneManager.MarkSceneDirty();
+
+        AssetDatabase.SaveAssets();
         playerTransform = GetComponent<Player>().transform;
         aimHandler = GetComponent<AimHandler>();
     }

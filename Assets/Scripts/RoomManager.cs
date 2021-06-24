@@ -21,7 +21,7 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         //SpawnFromAllPoints();
-        SpawnPlayer();
+        //SpawnPlayer();
         numWaves--;
     }
 
