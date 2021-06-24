@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 4484114901334885543, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
+  playerPrefab: {fileID: 6615614522939566696, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   spawnPoints:
   - {fileID: 544197731249841425}
   - {fileID: 544197732332622690}

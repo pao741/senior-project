@@ -52,7 +52,9 @@ public class Portal : MonoBehaviour
             actionText.text = message;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(0);
+                int sceneToLoad = 0;
+                SceneManager.LoadScene(sceneToLoad);
+                //SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), sceneToLoad)
             }
         }
         else

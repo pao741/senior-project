@@ -5,17 +5,16 @@ using UnityEngine;
 public class CameraTarget : MonoBehaviour
 {
     public Camera cam;
-    public Transform player;
     public float threshold;
 
     // Update is called once per frame
     void Update()
     {
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 targetPos = (player.position + mousePos) / 2f;
+        Vector3 targetPos = (Player.GetPosition() + mousePos) / 2f;
 
-        targetPos.x = Mathf.Clamp(targetPos.x, -threshold + player.position.x, threshold + player.position.x);
-        targetPos.y = Mathf.Clamp(targetPos.y, -threshold + player.position.y, threshold + player.position.y);
+        targetPos.x = Mathf.Clamp(targetPos.x, -threshold + Player.GetPosition().x, threshold + Player.GetPosition().x);
+        targetPos.y = Mathf.Clamp(targetPos.y, -threshold + Player.GetPosition().y, threshold + Player.GetPosition().y);
 
         this.transform.position = targetPos;
     }

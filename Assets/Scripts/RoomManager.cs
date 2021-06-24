@@ -8,6 +8,7 @@ public class RoomManager : MonoBehaviour
 
     public Portal portal;
 
+    public GameObject playerPrefab;
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
     public bool roomCleared = false;
@@ -20,6 +21,7 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         //SpawnFromAllPoints();
+        SpawnPlayer();
         numWaves--;
     }
 
@@ -58,6 +60,11 @@ public class RoomManager : MonoBehaviour
             portal.SetInteractable(false);
         }*/
 
+    }
+
+    void SpawnPlayer()
+    {
+        Instantiate(playerPrefab, new Vector3(0,0,0), Quaternion.identity);
     }
 
     void SpawnFromAllPoints()
