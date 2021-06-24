@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rb;
     public Animator animator;
-    public Camera cam;
     public Transform playerGFX;
     public Player player;
 
@@ -67,8 +66,8 @@ public class PlayerMovement : MonoBehaviour
                 movement.x = Input.GetAxisRaw("Horizontal");
                 movement.y = Input.GetAxisRaw("Vertical");
 
-                mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-                lookDir = mousePos - rb.position;
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                lookDir = (mousePos - rb.position).normalized;
 
                 // Animator
 
@@ -78,12 +77,13 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal", movement.x);
                 animator.SetFloat("Vertical", movement.y);
                 animator.SetFloat("Speed", movement.sqrMagnitude);
-
-                if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+                
+                Debug.Log(lookDir);
+                /*if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
                 {
                     animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
                     animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
-                }
+                }*/
 
                 if (Input.GetButtonDown("Jump") && Time.time > nextDashTimer) // dash (don't have a use for it)
                 {

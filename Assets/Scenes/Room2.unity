@@ -5371,6 +5371,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1611632475842409244, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: meleeManagerObject
+      value: 
+      objectReference: {fileID: 102965797}
+    - target: {fileID: 1611632475842409244, guid: 62e46805040bb494d951160f43208e2f, type: 3}
+      propertyPath: shootingManagerObject
+      value: 
+      objectReference: {fileID: 1091246077}
     - target: {fileID: 1611632476709183205, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5393,7 +5401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5963750667747474005, guid: 62e46805040bb494d951160f43208e2f, type: 3}
       propertyPath: m_Value
-      value: 52.4
+      value: 52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e46805040bb494d951160f43208e2f, type: 3}
@@ -5640,15 +5648,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8769901451787312821, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769901452528556897, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8769901452528556897, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
