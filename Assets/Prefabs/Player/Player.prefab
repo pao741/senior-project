@@ -119,7 +119,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 6615614522939566700}
   animator: {fileID: 391699024}
-  cam: {fileID: 0}
+  cam: {fileID: 5856888892622111773, guid: 69c7a83f0bf86e94ea3b7166b2653a2e, type: 3}
   playerGFX: {fileID: 6615614522939566690}
   player: {fileID: 6615614522939566688}
   dashCooldown: 1
@@ -497,7 +497,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 6615614522939566700}
   animator: {fileID: 2024648489}
-  cam: {fileID: 0}
+  cam: {fileID: 5856888892622111773, guid: 69c7a83f0bf86e94ea3b7166b2653a2e, type: 3}
   playerGFX: {fileID: 6615614522939566690}
   player: {fileID: 6615614522939566688}
   dashCooldown: 1
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBar: {fileID: 7255546150185083218, guid: bd9b5fa8e8bda464aac1f0d6ab6dde6d, type: 3}
+  healthBar: {fileID: 6068284146612593203, guid: 753ae01861c01ae46a73bae6c63d8b33, type: 3}
   cameraShake: {fileID: 5856888892622111968, guid: 69c7a83f0bf86e94ea3b7166b2653a2e, type: 3}
   DeathMessage: {fileID: 2786812771829142949, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
 --- !u!114 &254782626

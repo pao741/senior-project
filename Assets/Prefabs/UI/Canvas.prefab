@@ -2127,6 +2127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2786812771829142949, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
 --- !u!224 &1611632476738612221 stripped
@@ -2243,6 +2247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1611632475250527509}
     m_Modifications:
+    - target: {fileID: 7255546151065002084, guid: bd9b5fa8e8bda464aac1f0d6ab6dde6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255546151281958736, guid: bd9b5fa8e8bda464aac1f0d6ab6dde6d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
