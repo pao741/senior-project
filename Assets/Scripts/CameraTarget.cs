@@ -10,6 +10,10 @@ public class CameraTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseMenu.isPaused || Player.isDead)
+        {
+            return;
+        }
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 targetPos = (Player.GetPosition() + mousePos) / 2f;
 

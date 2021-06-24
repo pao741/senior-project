@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PauseMenu.isPaused || Player.isDead)
         {
+            rb.velocity = Vector3.zero;
             return;
         }
         switch (state)
@@ -115,7 +116,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        switch(state)
+        if (PauseMenu.isPaused || Player.isDead)
+        {
+            return;
+        }
+        switch (state)
         {
             case State.Normal:
                 rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
