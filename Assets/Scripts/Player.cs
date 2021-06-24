@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     int currentHealth;
     public int maxHealth = 100;
 
-    public GameObject healthBarObject;
+    GameObject healthBarObject;
     HealthBar healthBar;
     public CameraShake cameraShake;
     public static bool isDead;
@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         isDead = false;
+        //healthBar = healthBarObject.GetComponent<HealthBar>();
+        healthBarObject = GameObject.Find("/Canvas (1)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);

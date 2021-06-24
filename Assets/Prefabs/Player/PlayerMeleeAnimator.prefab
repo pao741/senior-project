@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36efcce6171b0f14cbd741f8668e8b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combatManager: {fileID: 0}
-  gameObject: {fileID: 0}
+  combatManager: {fileID: 6978986470094251613, guid: b3241cc74f8cf2d42bb3960576c1507b, type: 3}
+  gameObject: {fileID: 6978986470094251608, guid: b3241cc74f8cf2d42bb3960576c1507b, type: 3}
