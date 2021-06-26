@@ -24,7 +24,7 @@ TagManager:
   - Objects
   - Forground
   - EnemyProjectiles
-  - 
+  - DeadEnemy
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 2317635743
+    locked: 0
+  - name: DeadEnemy
+    uniqueID: 3367456229
     locked: 0
   - name: EnemyProjectiles
     uniqueID: 1341657275

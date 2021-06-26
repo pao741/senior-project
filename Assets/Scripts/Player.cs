@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     public static Transform playerTransform;
     static AimHandler aimHandler;
 
-    // Start is called before the first frame update
     void Start()
     {
         isDead = false;
@@ -39,14 +38,10 @@ public class Player : MonoBehaviour
         shootingManager = shootingManagerGameObject.GetComponent<Shooting>();
         meleeManager = meleeManagerGameObject.GetComponent<PlayerCombatManager>();
 
-        //healthBar = healthBarObject.GetComponent<HealthBar>(); 
         healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
-        //healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        //EditorUtility.SetDirty(yourScript);
-        //EditorSceneManager.MarkSceneDirty();
 
         AssetDatabase.SaveAssets();
         playerTransform = GetComponent<Player>().transform;
@@ -131,5 +126,10 @@ public class Player : MonoBehaviour
     public static GameObject GetMeleeManagerGameObject()
     {
         return meleeManagerGameObject;
+    }
+
+    public static GameObject GetGameObject()
+    {
+        return GameObject.Find("Player(Clone)");
     }
 }
