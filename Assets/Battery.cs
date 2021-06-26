@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 using TMPro;
 
@@ -15,36 +16,36 @@ public class Battery : MonoBehaviour
     public GameObject refillTextUIPrefab;
 
     private bool interactable = true;
+    //private bool justSet = false;
 
     void Start()
     {
-        //interactingMessage = InGameUIManager.GetInteractingMessage();
-        //actionText = InGameUIManager.GetActionText();
     }
 
     void Update()
     {
-        if (CheckPlayerInRange() && interactable)
+        if (CheckPlayerInRange() && interactable && !InGameUIManager.GetInteractingMessageActive())
         {
             batteryAnimator.SetBool("inRange", true);
-            interactingMessage.SetActive(true);
+            InGameUIManager.SetInteractingMessageActive(true);
 
-            actionText.text = message;
+            InGameUIManager.SetInteractingMessageText(message);
+
             if (Input.GetKeyDown(KeyCode.E) && Player.Refill())
             {
                 //also give player battery
 
-                interactingMessage.SetActive(false);
+                InGameUIManager.SetInteractingMessageActive(false);
                 GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0,0.5f,0), transform.rotation);
                 Destroy(refillText, 2f);
                 Destroy();
 
             }
         }
-        else
+        else if (!CheckPlayerInRange() && InGameUIManager.GetInteractingMessageActive())
         {
             batteryAnimator.SetBool("inRange", false);
-            interactingMessage.SetActive(false);
+            InGameUIManager.SetInteractingMessageActive(false);
         }
     }
     

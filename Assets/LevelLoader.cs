@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
+    public GameObject playerGameObject;
 
     void Update()
     {
@@ -19,6 +20,8 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         //  StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //playerGameObject = GameObject.Find("Player(Clone)");
+        //DontDestroyOnLoad(playerGameObject)
         StartCoroutine(LoadLevel(0));
     }
 

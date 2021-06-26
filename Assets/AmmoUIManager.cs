@@ -18,12 +18,7 @@ public class AmmoUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //meleeManager = meleeManagerObject.GetComponent<PlayerCombatManager>();
-        //shootingManager = shootingManagerObject.GetComponent<Shooting>();
-        //meleeManager = GameObject.Find("/Player(Clone)/MeleeAim/").GetComponent<PlayerCombatManager>();
-        //shootingManager = GameObject.Find("/Player(Clone)/GunAim/").GetComponent<Shooting>();
         shootingManager = Player.GetShootingManager();
-        //Debug.Log(Player.GetShootingManager().bulletText);
         shootingManagerObject = Player.GetShootingManagerGameObject();
         meleeManager = Player.GetMeleeManager();
         meleeManagerObject = Player.GetMeleeManagerGameObject();

@@ -7,14 +7,24 @@ using TMPro;
 public class InGameUIManager : MonoBehaviour
 {
     public GameObject parentInteractingMessage;
-    public static GameObject interactingMessage;
-    public static TextMeshProUGUI actionText;
+    public TextMeshProUGUI actionText;
+    static GameObject interactingMessage;
+    static TextMeshProUGUI staticActionText;
 
     // Start is called before the first frame update
     void Start()
     {
-        //interactingMessage = GameObject.Find("Canvas/InGameUI/InteractingMessage/InteractMessageText");
-        //actionText = GameObject.Find("Canvas/InGameUI/InteractingMessage/Action").GetComponent<TextMeshProUGUI>();
+        interactingMessage = parentInteractingMessage;
+        staticActionText = actionText; 
+        //interactingMessage = FindObject("InteractMessage");
+        //interactingMessage = parentInteractingMessage;
+        //actionText = interactingMessage.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+
+
+        //interactingMessage = GameObject.Find("/Canvas(Clone)/InGameUI/InteractMessage/");
+        //actionText = GameObject.Find("/Canvas(Clone)/InGameUI/InteractMessage/Action/").GetComponent<TextMeshProUGUI>();
+
+        parentInteractingMessage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,7 +34,7 @@ public class InGameUIManager : MonoBehaviour
         //Debug.Log(actionText == null);
     }
 
-    public static GameObject GetInteractingMessage()
+    /*public static GameObject GetInteractingMessage()
     {
         return interactingMessage;
     }
@@ -32,5 +42,21 @@ public class InGameUIManager : MonoBehaviour
     public static TextMeshProUGUI GetActionText()
     {
         return actionText;
+    }*/
+
+    public static void SetInteractingMessageActive(bool cond)
+    {
+        Debug.Log(cond);
+        interactingMessage.SetActive(cond);
+    }
+
+    public static void SetInteractingMessageText(string text)
+    {
+        staticActionText.text = text;
+    }
+
+    public static bool GetInteractingMessageActive()
+    {
+        return interactingMessage.activeSelf;
     }
 }

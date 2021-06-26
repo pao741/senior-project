@@ -53,6 +53,8 @@ public class Portal : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 int sceneToLoad = 0;
+
+                DontDestroyOnLoad(GameObject.Find("Player(Clone)"));
                 SceneManager.LoadScene(sceneToLoad);
                 //SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), sceneToLoad)
             }
@@ -98,7 +100,7 @@ public class Portal : MonoBehaviour
         return distanceFromPlayer <= interactingRange;
     }
 
-    public static Vector3 getPosition()
+    public static Vector3 GetPosition()
     {
         return portalTransform.position;
     }

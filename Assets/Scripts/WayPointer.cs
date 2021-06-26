@@ -5,8 +5,8 @@ using UnityEngine;
 public class WayPointer : MonoBehaviour
 {
 
-    public Transform target;
-    private Vector3 targetPosition;
+    //public Transform target;
+    //private Vector3 targetPosition;
 
     void Start()
     {
@@ -22,8 +22,8 @@ public class WayPointer : MonoBehaviour
     {
         //RotatePointer();
 
-        targetPosition = target.position;
-        Vector3 toPosition = target.position;
+        //targetPosition = target.position;
+        Vector3 toPosition = Portal.GetPosition();
         //Vector3 fromPosition = Camera.main.transform.position;
         Vector3 fromPosition = Player.GetPosition();
         fromPosition.z = 0f;
