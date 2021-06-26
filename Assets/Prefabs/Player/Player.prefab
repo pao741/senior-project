@@ -33,9 +33,9 @@ Transform:
   m_LocalPosition: {x: 0.77, y: 0.258, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
+  - {fileID: 1872648807}
   - {fileID: 6615614524860214497}
   - {fileID: 2018837628}
-  - {fileID: 1872648807}
   - {fileID: 391699022}
   - {fileID: 2024648488}
   m_Father: {fileID: 0}
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBarObject: {fileID: 9079683561069231257, guid: daf4e827f1437d64495c0d9725c40082, type: 3}
   cameraShake: {fileID: 5856888892622111968, guid: 69c7a83f0bf86e94ea3b7166b2653a2e, type: 3}
   DeathMessage: {fileID: 2786812771829142949, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
 --- !u!114 &254782626
@@ -195,7 +194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 490078057368563418, guid: fbdd2fb49e687d34faeafdddb7504d94, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 490078057368563418, guid: fbdd2fb49e687d34faeafdddb7504d94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -345,11 +344,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6978986470094251608, guid: b3241cc74f8cf2d42bb3960576c1507b, type: 3}
       propertyPath: m_Name
-      value: Melee Aim
+      value: MeleeAim
       objectReference: {fileID: 0}
     - target: {fileID: 6978986470094251611, guid: b3241cc74f8cf2d42bb3960576c1507b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6978986470094251611, guid: b3241cc74f8cf2d42bb3960576c1507b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -519,7 +518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8703480834531465312, guid: 31c9db0a59c88d445b3d18c113d08727, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8703480834531465312, guid: 31c9db0a59c88d445b3d18c113d08727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -563,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8703480834531465313, guid: 31c9db0a59c88d445b3d18c113d08727, type: 3}
       propertyPath: m_Name
-      value: Gun Aim
+      value: GunAim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c9db0a59c88d445b3d18c113d08727, type: 3}

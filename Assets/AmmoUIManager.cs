@@ -6,8 +6,8 @@ using TMPro;
 
 public class AmmoUIManager : MonoBehaviour
 {
-    public GameObject meleeManagerObject;
-    public GameObject shootingManagerObject;
+    GameObject meleeManagerObject;
+    GameObject shootingManagerObject;
     public AmmoBar ammoBar;
     public TextMeshProUGUI weaponName;
     PlayerCombatManager meleeManager;
@@ -18,14 +18,24 @@ public class AmmoUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        meleeManager = meleeManagerObject.GetComponent<PlayerCombatManager>();
-        shootingManager = shootingManagerObject.GetComponent<Shooting>();
-        ammoText.text = shootingManager.bulletText;
+        //meleeManager = meleeManagerObject.GetComponent<PlayerCombatManager>();
+        //shootingManager = shootingManagerObject.GetComponent<Shooting>();
+        //meleeManager = GameObject.Find("/Player(Clone)/MeleeAim/").GetComponent<PlayerCombatManager>();
+        //shootingManager = GameObject.Find("/Player(Clone)/GunAim/").GetComponent<Shooting>();
+        shootingManager = Player.GetShootingManager();
+        //Debug.Log(Player.GetShootingManager().bulletText);
+        shootingManagerObject = Player.GetShootingManagerGameObject();
+        meleeManager = Player.GetMeleeManager();
+        meleeManagerObject = Player.GetMeleeManagerGameObject();
+
+        //ammoText.text = shootingManager.bulletText;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //meleeManagerObject = GameObject.Find("/Player/MeleeAim/");
+        //shootingManagerObject = GameObject.Find("/Player/GunAim/");
         if (meleeManagerObject.activeSelf)
         {
             SetMeleeDurabilityUI();

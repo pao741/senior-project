@@ -77,8 +77,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal", movement.x);
                 animator.SetFloat("Vertical", movement.y);
                 animator.SetFloat("Speed", movement.sqrMagnitude);
-                
-                Debug.Log(lookDir);
                 /*if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
                 {
                     animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));

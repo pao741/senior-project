@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
 
     GameObject healthBarObject;
     HealthBar healthBar;
+
+    static Shooting shootingManager;
+    static PlayerCombatManager meleeManager;
+    static GameObject shootingManagerGameObject;
+    static GameObject meleeManagerGameObject;
+
     public CameraShake cameraShake;
     public static bool isDead;
 
@@ -26,8 +32,15 @@ public class Player : MonoBehaviour
     void Start()
     {
         isDead = false;
+
+        shootingManagerGameObject = gameObject.transform.GetChild(0).gameObject;
+        meleeManagerGameObject = gameObject.transform.GetChild(1).gameObject;
+
+        shootingManager = shootingManagerGameObject.GetComponent<Shooting>();
+        meleeManager = meleeManagerGameObject.GetComponent<PlayerCombatManager>();
+
         //healthBar = healthBarObject.GetComponent<HealthBar>(); 
-        healthBarObject = GameObject.Find("/Canvas (1)/InGameUI/HealthBar/");
+        healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         //healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
@@ -98,5 +111,25 @@ public class Player : MonoBehaviour
     public static float GetSwordDurabilityPercentage()
     {
         return aimHandler.GetSwordDurabilityPercentage();
+    }
+
+    public static Shooting GetShootingManager()
+    {
+        return shootingManager;
+    }
+
+    public static PlayerCombatManager GetMeleeManager()
+    {
+        return meleeManager;
+    }
+
+    public static GameObject GetShootingManagerGameObject()
+    {
+        return shootingManagerGameObject;
+    }
+
+    public static GameObject GetMeleeManagerGameObject()
+    {
+        return meleeManagerGameObject;
     }
 }
