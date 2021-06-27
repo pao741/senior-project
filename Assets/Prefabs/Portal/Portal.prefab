@@ -266,11 +266,11 @@ GameObject:
   - component: {fileID: 4484114901334885563}
   m_Layer: 8
   m_Name: Portal
-  m_TagString: Portal
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4484114901334885542
 Transform:
   m_ObjectHideFlags: 0
@@ -369,11 +369,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  waypointerHandler: {fileID: 0}
   maxHealth: 300
   healthBar: {fileID: 4484114902033844990}
   interactingRange: 1
   interactingMessage: {fileID: 0}
   actionText: {fileID: 0}
+  message: use the portal
 --- !u!50 &4484114901334885540
 Rigidbody2D:
   serializedVersion: 4

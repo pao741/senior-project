@@ -20,7 +20,7 @@ public class Portal : MonoBehaviour
 
     public GameObject interactingMessage;
     public TextMeshProUGUI actionText;
-    private string message = "use the portal";
+    public string message = "use the portal";
 
     private bool interactable = false;
 
@@ -47,7 +47,6 @@ public class Portal : MonoBehaviour
         }
         if (CheckPlayerInRange() && interactable)
         {
-            interactingMessage.SetActive(true);
 
             actionText.text = message;
             if (Input.GetKeyDown(KeyCode.E))
@@ -59,11 +58,6 @@ public class Portal : MonoBehaviour
                 //SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), sceneToLoad)
             }
         }
-        else
-        {
-            interactingMessage.SetActive(false);
-        }
-        // go to next stage
     }
 
     public void TakeDamage(int damage)
@@ -96,7 +90,7 @@ public class Portal : MonoBehaviour
 
     public bool CheckPlayerInRange()
     {
-        float distanceFromPlayer = Vector3.Distance(Player.GetPosition(), rb.position);
+        float distanceFromPlayer = Vector3.Distance(Player.GetPosition(), transform.position);
         return distanceFromPlayer <= interactingRange;
     }
 

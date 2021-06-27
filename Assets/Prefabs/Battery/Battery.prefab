@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1833333437
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -6186673310956470670, guid: 8aa873c50caf9e649a7e659362e72677, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 6631194611257781831}
   m_Layer: 0
   m_Name: Battery
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +151,7 @@ MonoBehaviour:
   batteryAnimator: {fileID: 6631194612150548885}
   interactingMessage: {fileID: 7296056470625889555, guid: b01520405d3dbf04dbf026cb28f32fc4, type: 3}
   actionText: {fileID: 6875680774298344971, guid: d6d0490832b2d19478e7984e23f66c3e, type: 3}
+  message: pick up battery
   refillTextUIPrefab: {fileID: 7242411494721318402, guid: 2e5301d02b3801048b16dfb27ea1d0c9, type: 3}
 --- !u!1 &6631194612150548887
 GameObject:
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1941546839
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 7068569670623708638, guid: 28d3dd36d1d71d149bfd36fe0fd0a284, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

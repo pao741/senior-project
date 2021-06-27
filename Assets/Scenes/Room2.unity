@@ -5622,10 +5622,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
-    - target: {fileID: 4484114901334885562, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4484114901334885563, guid: fec4cd9d1ceecb34aaf7ea2de301b12e, type: 3}
       propertyPath: m_Size.y
       value: 0.7621232
@@ -5694,10 +5690,6 @@ PrefabInstance:
     - target: {fileID: 6631194611257781881, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}
       propertyPath: m_Name
       value: Battery
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631194611257781881, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}

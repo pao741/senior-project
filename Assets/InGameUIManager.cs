@@ -30,23 +30,57 @@ public class InGameUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(interactingMessage == null);
-        //Debug.Log(actionText == null);
+        GameObject item = getItemInRange();
+        if (item != null)
+        {
+            Battery battery = item.GetComponent<Battery>();
+            Portal portal = item.GetComponent<Portal>();
+            if (battery != null)
+            {
+                parentInteractingMessage.SetActive(true);
+                actionText.text = battery.message;
+            }
+            else if (portal != null)
+            {
+                parentInteractingMessage.SetActive(true);
+                actionText.text = portal.message;
+            }
+        }
+        else
+        {
+            parentInteractingMessage.SetActive(false);
+        }
+
     }
 
-    /*public static GameObject GetInteractingMessage()
+    public GameObject getItemInRange()
     {
-        return interactingMessage;
-    }
+        GameObject[] items = GameObject.FindGameObjectsWithTag("Interactable");
+        for (int i = 0; i < items.Length; i++)
+        {
+            Battery currentBattery = items[i].GetComponent<Battery>();
+            Portal portal = items[i].GetComponent<Portal>();
 
-    public static TextMeshProUGUI GetActionText()
-    {
-        return actionText;
-    }*/
+            if (currentBattery != null)
+            {
+                if (currentBattery.CheckPlayerInRange())
+                {
+                    return items[i];
+                }
+            }
+            else if (portal != null)
+            {
+                if (portal.CheckPlayerInRange())
+                {
+                    return items[i];
+                }
+            }
+        }
+        return null;
+    }
 
     public static void SetInteractingMessageActive(bool cond)
     {
-        Debug.Log(cond);
         interactingMessage.SetActive(cond);
     }
 

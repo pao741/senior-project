@@ -12,7 +12,7 @@ public class Battery : MonoBehaviour
     public Animator batteryAnimator;
     public GameObject interactingMessage;
     public TextMeshProUGUI actionText;
-    private string message = "pick up battery";
+    public string message = "pick up battery";
     public GameObject refillTextUIPrefab;
 
     private bool interactable = true;
@@ -24,28 +24,22 @@ public class Battery : MonoBehaviour
 
     void Update()
     {
-        if (CheckPlayerInRange() && interactable && !InGameUIManager.GetInteractingMessageActive())
+        if (CheckPlayerInRange() && interactable)
         {
             batteryAnimator.SetBool("inRange", true);
-            InGameUIManager.SetInteractingMessageActive(true);
-
-            InGameUIManager.SetInteractingMessageText(message);
 
             if (Input.GetKeyDown(KeyCode.E) && Player.Refill())
             {
                 //also give player battery
-
-                InGameUIManager.SetInteractingMessageActive(false);
                 GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0,0.5f,0), transform.rotation);
                 Destroy(refillText, 2f);
                 Destroy();
 
             }
         }
-        else if (!CheckPlayerInRange() && InGameUIManager.GetInteractingMessageActive())
+        else
         {
             batteryAnimator.SetBool("inRange", false);
-            InGameUIManager.SetInteractingMessageActive(false);
         }
     }
     
