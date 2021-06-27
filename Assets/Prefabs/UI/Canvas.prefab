@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1611632475707452895}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2290,6 +2290,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1611632475141469434}
     m_Modifications:
+    - target: {fileID: 6875680774298344971, guid: d6d0490832b2d19478e7984e23f66c3e, type: 3}
+      propertyPath: m_text
+      value: pick up battery
+      objectReference: {fileID: 0}
     - target: {fileID: 6875680774487066004, guid: d6d0490832b2d19478e7984e23f66c3e, type: 3}
       propertyPath: m_Name
       value: Action

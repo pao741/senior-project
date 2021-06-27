@@ -11,8 +11,8 @@ TagManager:
   - Melee
   - Portal
   - Corpse
-  - Pickup
   - Interactable
+  - UI
   layers:
   - Default
   - TransparentFX

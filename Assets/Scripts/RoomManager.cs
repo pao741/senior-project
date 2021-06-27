@@ -21,7 +21,14 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         //SpawnFromAllPoints();
-        SpawnPlayer();
+        if(GameObject.FindGameObjectsWithTag("Player").Length == 0)
+        {
+            SpawnPlayer();
+        }
+        else
+        {
+            Player.ResetPosition();
+        }
         //numWaves--;
     }
 

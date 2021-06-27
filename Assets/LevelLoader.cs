@@ -22,7 +22,7 @@ public class LevelLoader : MonoBehaviour
         //  StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         //playerGameObject = GameObject.Find("Player(Clone)");
         //DontDestroyOnLoad(playerGameObject)
-        StartCoroutine(LoadLevel(0));
+        StartCoroutine(LoadLevel(3));
     }
 
     IEnumerator LoadLevel(int levelIndex)

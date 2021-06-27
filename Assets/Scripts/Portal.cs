@@ -48,12 +48,13 @@ public class Portal : MonoBehaviour
         if (CheckPlayerInRange() && interactable)
         {
 
-            actionText.text = message;
+            //actionText.text = message;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                int sceneToLoad = 0;
+                int sceneToLoad = 3;
 
                 DontDestroyOnLoad(GameObject.Find("Player(Clone)"));
+                DontDestroyOnLoad(GameObject.Find("Canvas(Clone)"));
                 SceneManager.LoadScene(sceneToLoad);
                 //SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), sceneToLoad)
             }

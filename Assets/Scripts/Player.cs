@@ -132,4 +132,9 @@ public class Player : MonoBehaviour
     {
         return GameObject.Find("Player(Clone)");
     }
+
+    public static void ResetPosition()
+    {
+        playerTransform.position = new Vector3(0, 0, 0);
+    }
 }
