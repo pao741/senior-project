@@ -22,25 +22,12 @@ public class RoomManager : MonoBehaviour
     {
         //SpawnFromAllPoints();
         SpawnPlayer();
-        numWaves--;
+        //numWaves--;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // input to summon enemy
-        {
-            int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            int randSpawnPoints = Random.Range(0, spawnPoints.Length);
-
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoints].position, Quaternion.identity);
-        }
-
-        if (Input.GetKeyDown(KeyCode.T)) // input to summon enemy
-        {
-            SpawnFromAllPoints();
-        }
-
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if(enemies.Length == 0 && numWaves > 0)
         {
