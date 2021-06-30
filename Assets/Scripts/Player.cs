@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public GameObject DeathMessage;
 
     public static Transform playerTransform;
+    public static int stageClear = 0;
     static AimHandler aimHandler;
 
     void Start()
@@ -136,5 +137,10 @@ public class Player : MonoBehaviour
     public static void ResetPosition()
     {
         playerTransform.position = new Vector3(0, 0, 0);
+    }
+
+    public static void AddStageCleared()
+    {
+        stageClear++;
     }
 }
