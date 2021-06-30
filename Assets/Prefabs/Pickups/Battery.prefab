@@ -149,9 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactingRange: 1
   batteryAnimator: {fileID: 6631194612150548885}
-  interactingMessage: {fileID: 7296056470625889555, guid: b01520405d3dbf04dbf026cb28f32fc4, type: 3}
-  actionText: {fileID: 6875680774298344971, guid: d6d0490832b2d19478e7984e23f66c3e, type: 3}
-  message: pick up battery
+  message: pick up Battery
   refillTextUIPrefab: {fileID: 7242411494721318402, guid: 2e5301d02b3801048b16dfb27ea1d0c9, type: 3}
 --- !u!1 &6631194612150548887
 GameObject:

@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     public LayerMask enemyLayer;
     public GameObject batteryPrefab;
+    public GameObject healthPlusPrefab;
 
     public float speed = 100f;
     public float nextWayPointDistance = 3f;
@@ -338,6 +339,7 @@ public class EnemyAI : MonoBehaviour
         healthBar.Destroy();
         gameObject.tag = "Corpse";
         DropBattery();
+        DropHealth();
         Destroy(gameObject, 10f);
     }
 
@@ -358,6 +360,17 @@ public class EnemyAI : MonoBehaviour
             {
                 GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
             }
+        }
+    }
+
+    void DropHealth()
+    {
+        float percent = Player.GetHealth() / Player.GetMaxHealth(); //
+        float random = Random.Range(0f, 1f);
+        float dropProbability = 0.6f * (1 - percent); // max drop change of 50% (though max chance can only be achieve by having 0 health)
+        if (random <= dropProbability)
+        {
+            GameObject healthPlus = Instantiate(healthPlusPrefab, thisEnemy.position, thisEnemy.rotation);
         }
     }
 

@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
-using TMPro;
 
-public class Battery : MonoBehaviour
+public class HealthPlus : MonoBehaviour
 {
     // Start is called before the first frame update
     public float interactingRange = 1f;
-    public Animator batteryAnimator;
-    public string message = "pick up Battery";
+    public Animator healthAnimator;
+    public string message = "pick up Health+";
     public GameObject refillTextUIPrefab;
 
     private bool interactable = true;
@@ -24,12 +21,12 @@ public class Battery : MonoBehaviour
     {
         if (CheckPlayerInRange() && interactable)
         {
-            batteryAnimator.SetBool("inRange", true);
+            healthAnimator.SetBool("inRange", true);
 
-            if (Input.GetKeyDown(KeyCode.E) && Player.Refill())
+            if (Input.GetKeyDown(KeyCode.E) && Player.Heal())
             {
                 //also give player battery
-                GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0,0.5f,0), transform.rotation);
+                GameObject refillText = Instantiate(refillTextUIPrefab, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
                 Destroy(refillText, 2f);
                 Destroy();
 
@@ -37,10 +34,10 @@ public class Battery : MonoBehaviour
         }
         else
         {
-            batteryAnimator.SetBool("inRange", false);
+            healthAnimator.SetBool("inRange", false);
         }
     }
-    
+
 
     void Destroy()
     {

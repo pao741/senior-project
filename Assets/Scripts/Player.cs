@@ -5,11 +5,11 @@ using UnityEditor;
 
 public class Player : MonoBehaviour
 {
-    int currentHealth;
-    public int maxHealth = 100;
+    static int currentHealth;
+    public static int maxHealth = 100;
 
     GameObject healthBarObject;
-    HealthBar healthBar;
+    static HealthBar healthBar;
 
     static Shooting shootingManager;
     static PlayerCombatManager meleeManager;
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(currentHealth);
 
         AssetDatabase.SaveAssets();
         playerTransform = GetComponent<Player>().transform;
@@ -147,5 +147,30 @@ public class Player : MonoBehaviour
     public static int GetStagedCleared()
     {
         return stageCleared;
+    }
+
+    public static int GetHealth()
+    {
+        return currentHealth;
+    }
+
+    public static int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public static bool Heal()
+    {
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += 50;
+            currentHealth = (currentHealth > maxHealth) ? maxHealth : currentHealth;
+            healthBar.SetHealth(currentHealth); // set health bar to current health
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

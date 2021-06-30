@@ -34,11 +34,17 @@ public class InGameUIManager : MonoBehaviour
         if (item != null)
         {
             Battery battery = item.GetComponent<Battery>();
+            HealthPlus healthPlus = item.GetComponent<HealthPlus>();
             Portal portal = item.GetComponent<Portal>();
             if (battery != null)
             {
                 parentInteractingMessage.SetActive(true);
                 actionText.text = battery.message;
+            }
+            else if (healthPlus != null)
+            {
+                parentInteractingMessage.SetActive(true);
+                actionText.text = healthPlus.message;
             }
             else if (portal != null)
             {
@@ -59,11 +65,19 @@ public class InGameUIManager : MonoBehaviour
         for (int i = 0; i < items.Length; i++)
         {
             Battery currentBattery = items[i].GetComponent<Battery>();
+            HealthPlus healthPlus = items[i].GetComponent<HealthPlus>();
             Portal portal = items[i].GetComponent<Portal>();
 
             if (currentBattery != null)
             {
                 if (currentBattery.CheckPlayerInRange())
+                {
+                    return items[i];
+                }
+            }
+            else if (healthPlus != null)
+            {
+                if (healthPlus.CheckPlayerInRange())
                 {
                     return items[i];
                 }
