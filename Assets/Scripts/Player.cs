@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public GameObject DeathMessage;
 
     public static Transform playerTransform;
-    public static int stageClear = 0;
+    public static int stageCleared = 0;
     static AimHandler aimHandler;
 
     void Start()
@@ -141,6 +141,11 @@ public class Player : MonoBehaviour
 
     public static void AddStageCleared()
     {
-        stageClear++;
+        stageCleared++;
+    }
+
+    public static int GetStagedCleared()
+    {
+        return stageCleared;
     }
 }

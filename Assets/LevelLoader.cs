@@ -7,7 +7,10 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    public GameObject playerGameObject;
+
+    public void StartLevel()
+    {
+    }
 
     void Update()
     {
@@ -19,20 +22,20 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        //  StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        //playerGameObject = GameObject.Find("Player(Clone)");
-        //DontDestroyOnLoad(playerGameObject)
-        StartCoroutine(LoadLevel(3));
+        int nextStage = Random.Range(1, 5);
+        StartCoroutine(LoadLevel(nextStage));
     }
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        transition.SetTrigger("Start");
+        transition.SetBool("Starting", true);
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(0);
-    }
+        SceneManager.LoadScene(levelIndex);
 
-    //public static void LoadLevel(itn )
+        //yield return new WaitForSeconds(transitionTime);
+
+        transition.SetBool("Starting", false);
+    }
 }
