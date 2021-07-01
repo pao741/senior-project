@@ -510,8 +510,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Speed
     m_Mirror: 0
-  m_BlendParameter: LastHorizontal
-  m_BlendParameterY: LastVertical
+  m_BlendParameter: MouseHorizontal
+  m_BlendParameterY: MouseVertical
   m_MinThreshold: 0
   m_MaxThreshold: 0.8333333
   m_UseAutomaticThresholds: 1
