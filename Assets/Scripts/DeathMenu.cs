@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class DeathMenu : PauseMenu
 {
     public GameObject deathMenu;
     static GameObject staticDeathMenu;
+    //static string survivedText;
+    static TextMeshProUGUI survivedText;
 
     void Start()
     {
@@ -15,9 +19,6 @@ public class DeathMenu : PauseMenu
 
     public void Restart()
     {
-        //Destroy(GameObject.Find("/Canvas(Clone)/"));
-        //Destroy(GameObject.Find("/Player(Clone)"));
-
         LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
         levelLoader.LoadNextLevel();
     }
@@ -25,5 +26,7 @@ public class DeathMenu : PauseMenu
     public static void SetDeathMenuActive()
     {
         staticDeathMenu.SetActive(true);
+        survivedText = GameObject.Find("/Canvas(Clone)/DeathMenu/SurvivedText").GetComponent<TextMeshProUGUI>();
+        survivedText.text = "You survived for " + Player.GetStagedCleared().ToString() + " stage(s)";
     }
 }

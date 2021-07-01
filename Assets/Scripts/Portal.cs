@@ -44,7 +44,7 @@ public class Portal : MonoBehaviour
         {
             invulnerable = false;
         }
-        if (CheckPlayerInRange() && interactable)
+        if (CheckPlayerInRange() && interactable && !Player.isDead)
         {
 
             //actionText.text = message;
@@ -53,7 +53,7 @@ public class Portal : MonoBehaviour
                 DontDestroyOnLoad(GameObject.Find("Player(Clone)"));
                 DontDestroyOnLoad(GameObject.Find("Canvas(Clone)"));
 
-
+                Player.AddStageCleared();
                 LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
                 levelLoader.LoadNextLevel();
                 //SceneManager.LoadScene(sceneToLoad);

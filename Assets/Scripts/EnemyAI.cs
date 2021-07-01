@@ -87,19 +87,11 @@ public class EnemyAI : MonoBehaviour
                         
                         if (hit == null)
                         {
-                            //Debug.DrawRay(thisEnemy.position, randomDir * 5f, Color.white, 4f);
-                            //Debug.Log("Path found");
-
-                            //Debug.Log(hit.collider.tag);
                             break;
                         }
-                        else if (hit.collider.tag == "Walls")// Doesn't hit
+                        else if (hit.collider.tag == "Walls")
                         {
-                            //Debug.Log("Path not found");
-                            /*if (hit.collider.tag == "Walls") // if i remove this line the game crash idk why
-                            {
-                                
-                            }*/
+
                         }
                     }
                 }
