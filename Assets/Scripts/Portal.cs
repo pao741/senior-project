@@ -50,15 +50,12 @@ public class Portal : MonoBehaviour
             //actionText.text = message;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                int sceneToLoad = 3;
-
                 DontDestroyOnLoad(GameObject.Find("Player(Clone)"));
                 DontDestroyOnLoad(GameObject.Find("Canvas(Clone)"));
 
 
                 LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
                 levelLoader.LoadNextLevel();
-                levelLoader.StartLevel();
                 //SceneManager.LoadScene(sceneToLoad);
                 //SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), sceneToLoad)
             }

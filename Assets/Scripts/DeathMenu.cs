@@ -15,8 +15,11 @@ public class DeathMenu : PauseMenu
 
     public void Restart()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(1);
+        //Destroy(GameObject.Find("/Canvas(Clone)/"));
+        //Destroy(GameObject.Find("/Player(Clone)"));
+
+        LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
+        levelLoader.LoadNextLevel();
     }
 
     public static void SetDeathMenuActive()

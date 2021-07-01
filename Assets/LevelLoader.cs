@@ -8,10 +8,6 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
 
-    public void StartLevel()
-    {
-    }
-
     void Update()
     {
         /*if (Input.GetButtonDown("Jump"))
@@ -22,7 +18,12 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        int nextStage = Random.Range(1, 5);
+        int nextStage;
+        do
+        {
+            nextStage = Random.Range(1, 5);
+            
+        } while (nextStage == SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(LoadLevel(nextStage));
     }
 
