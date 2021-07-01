@@ -15,7 +15,7 @@ public class WaypointerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (RoomManager.getIsCleared()) {
+        if (RoomManager.getIsCleared() && GameObject.Find("/Portal")) {
             float distance = Vector2.Distance(Player.GetPosition(), Portal.GetPosition());
             if (distance < 2f)
             {

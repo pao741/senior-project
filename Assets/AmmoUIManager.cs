@@ -31,7 +31,7 @@ public class AmmoUIManager : MonoBehaviour
     {
         //meleeManagerObject = GameObject.Find("/Player/MeleeAim/");
         //shootingManagerObject = GameObject.Find("/Player/GunAim/");
-        if (meleeManagerObject.activeSelf)
+        if (meleeManagerObject != null && meleeManagerObject.activeSelf)
         {
             SetMeleeDurabilityUI();
             ammoText.text = meleeManager.durabilityText;

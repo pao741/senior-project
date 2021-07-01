@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         isDead = false;
-
+        stageCleared = 0;
         shootingManagerGameObject = gameObject.transform.GetChild(0).gameObject;
         meleeManagerGameObject = gameObject.transform.GetChild(1).gameObject;
 
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     {
         // YOU ARE FUCKING DEAD 
         isDead = true;
-        DeathMenu.SetDeathMenuActive();
+        DeathMenu.Enable();
         //GameObject.Find("/Canvas(Clone)/DeathMenu").SetActive(true);
     }
 

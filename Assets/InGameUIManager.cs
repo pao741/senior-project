@@ -16,13 +16,6 @@ public class InGameUIManager : MonoBehaviour
     {
         interactingMessage = parentInteractingMessage;
         staticActionText = actionText; 
-        //interactingMessage = FindObject("InteractMessage");
-        //interactingMessage = parentInteractingMessage;
-        //actionText = interactingMessage.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-
-
-        //interactingMessage = GameObject.Find("/Canvas(Clone)/InGameUI/InteractMessage/");
-        //actionText = GameObject.Find("/Canvas(Clone)/InGameUI/InteractMessage/Action/").GetComponent<TextMeshProUGUI>();
 
         parentInteractingMessage.SetActive(false);
     }
