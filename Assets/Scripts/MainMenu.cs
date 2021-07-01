@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    LevelLoader levelLoader;
+
+    void Start()
+    {
+        levelLoader = new LevelLoader();
+    }
+
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(Random.Range(1, 5));
     }
 
     public void QuitGame()
