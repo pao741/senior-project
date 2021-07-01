@@ -8,7 +8,6 @@ using TMPro;
 public class Portal : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform player;
     public WaypointerHandler waypointerHandler;
     public int maxHealth = 1000;
     int currentHealth;

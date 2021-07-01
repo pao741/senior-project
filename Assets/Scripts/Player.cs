@@ -81,7 +81,8 @@ public class Player : MonoBehaviour
     {
         // YOU ARE FUCKING DEAD 
         isDead = true;
-        DeathMessage.SetActive(true);
+        DeathMenu.SetDeathMenuActive();
+        //GameObject.Find("/Canvas(Clone)/DeathMenu").SetActive(true);
     }
 
     public void setInvulnerable(bool cond)
