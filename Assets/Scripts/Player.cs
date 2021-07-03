@@ -33,11 +33,17 @@ public class Player : MonoBehaviour
     {
         isDead = false;
         stageCleared = 0;
-        shootingManagerGameObject = gameObject.transform.GetChild(0).gameObject;
-        meleeManagerGameObject = gameObject.transform.GetChild(1).gameObject;
+        shootingManagerGameObject = GameObject.Find("GunAim");
+        meleeManagerGameObject = GameObject.Find("MeleeAim");
+        meleeManagerGameObject.SetActive(false);
+
+        Debug.Log(shootingManagerGameObject == null);
+        Debug.Log(meleeManagerGameObject == null);
 
         shootingManager = shootingManagerGameObject.GetComponent<Shooting>();
         meleeManager = meleeManagerGameObject.GetComponent<PlayerCombatManager>();
+        Debug.Log(shootingManager == null);
+        Debug.Log(meleeManager == null);
 
         healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();

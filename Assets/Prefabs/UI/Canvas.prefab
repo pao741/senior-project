@@ -637,7 +637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1611632475684916349}
-  transitionTime: 1
 --- !u!1 &1611632475724097862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,10 +2270,6 @@ PrefabInstance:
     - target: {fileID: 2786812771829142949, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
       propertyPath: m_Name
       value: DeathMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786812771829142949, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}

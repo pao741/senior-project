@@ -15,9 +15,6 @@ public class Portal : MonoBehaviour
     public HealthBar healthBar;
 
     public float interactingRange = 1f;
-
-    public GameObject interactingMessage;
-    public TextMeshProUGUI actionText;
     public string message = "use the portal";
 
     private bool interactable = false;

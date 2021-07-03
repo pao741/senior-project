@@ -18,10 +18,10 @@ public class AmmoUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shootingManager = Player.GetShootingManager();
+        /*shootingManager = Player.GetShootingManager();
         shootingManagerObject = Player.GetShootingManagerGameObject();
         meleeManager = Player.GetMeleeManager();
-        meleeManagerObject = Player.GetMeleeManagerGameObject();
+        meleeManagerObject = Player.GetMeleeManagerGameObject();*/
 
         //ammoText.text = shootingManager.bulletText;
     }
@@ -29,8 +29,10 @@ public class AmmoUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //meleeManagerObject = GameObject.Find("/Player/MeleeAim/");
-        //shootingManagerObject = GameObject.Find("/Player/GunAim/");
+        shootingManager = Player.GetShootingManager();
+        shootingManagerObject = Player.GetShootingManagerGameObject();
+        meleeManager = Player.GetMeleeManager();
+        meleeManagerObject = Player.GetMeleeManagerGameObject();
         if (meleeManagerObject != null && meleeManagerObject.activeSelf)
         {
             SetMeleeDurabilityUI();
