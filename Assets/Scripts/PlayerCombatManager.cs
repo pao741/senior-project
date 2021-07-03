@@ -47,23 +47,22 @@ public class PlayerCombatManager : MonoBehaviour
             
             clickCount++;
             clickCount = Mathf.Clamp(clickCount, 0, 3);
-            
-            if (attackSeq == 0 && Time.time >= nextAttackTime && clickCount >= 1)
-            {
-                animator.SetTrigger("Attack1"); 
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
-            else if (attackSeq == 1 && clickCount >= 2)
-            {
-                animator.SetTrigger("Attack2");
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
-            else if (attackSeq == 2 && clickCount >= 3)
-            {
-                animator.SetTrigger("Attack3"); 
-                nextAttackTime = Time.time + 1f / attackRate;
-                clickCount = 0;
-            }
+        }
+        if (attackSeq == 0 && Time.time >= nextAttackTime && clickCount >= 1)
+        {
+            animator.SetTrigger("Attack1");
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+        else if (attackSeq == 1 && clickCount >= 2)
+        {
+            animator.SetTrigger("Attack2");
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+        else if (attackSeq == 2 && clickCount >= 3)
+        {
+            animator.SetTrigger("Attack3");
+            nextAttackTime = Time.time + 1f / attackRate;
+            clickCount = 0;
         }
     }
 

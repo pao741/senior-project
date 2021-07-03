@@ -44,7 +44,6 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(currentHealth);
 
-        AssetDatabase.SaveAssets();
         playerTransform = GetComponent<Player>().transform;
         aimHandler = GetComponent<AimHandler>();
     }

@@ -258,15 +258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8769901451787312821, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769901452528556897, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8769901452528556897, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
@@ -5934,10 +5934,6 @@ PrefabInstance:
       propertyPath: portal
       value: 
       objectReference: {fileID: 409424049}
-    - target: {fileID: 544197732883651007, guid: 7f6b5fb817fe52f499e5786a2b7fa7a7, type: 3}
-      propertyPath: numWaves
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6b5fb817fe52f499e5786a2b7fa7a7, type: 3}
 --- !u!1 &2133231790

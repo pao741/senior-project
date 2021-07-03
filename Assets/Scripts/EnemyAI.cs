@@ -324,10 +324,10 @@ public class EnemyAI : MonoBehaviour
 
     void Die()
     {
-        isDead = true;
-        StopRigidBody();
         animator.SetTrigger("Death");
         gameObject.layer = 12; // Set enemy layer to 12 (DeadEnemy layer) to disable rigidbody interaction 
+        isDead = true;
+        StopRigidBody();
         healthBar.Destroy();
         gameObject.tag = "Corpse";
         DropBattery();

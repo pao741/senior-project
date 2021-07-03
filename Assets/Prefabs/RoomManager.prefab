@@ -306,4 +306,4 @@ MonoBehaviour:
   - {fileID: 1789675195319993141, guid: aa69bfb67fae4a147bef6cdaec52f159, type: 3}
   - {fileID: 8769901451787312821, guid: 82a8c5e7845229d4d8ca3db52b26bceb, type: 3}
   roomCleared: 0
-  numWaves: 2
+  numWaves: 1
