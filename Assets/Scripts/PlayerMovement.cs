@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float nextDashTimer;
     public float dashSpeed = 250f;
     
-    private bool isDashing;
+    //private bool isDashing;
     private float currentDashSpeed;
     private Vector2 dashDirection;
 
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 mousePos;
     Vector2 lookDir;
 
-    
+    public static bool isDashing =  false;
 
     private enum State
     {
@@ -87,7 +87,9 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (movement.x != 0 || movement.y != 0)
                     {
+                        CinemachineShake.Instance.ShakeCamera(1f, .2f);
                         player.setInvulnerable(true);
+                        isDashing = true;
                         dashDirection = new Vector2(movement.x, movement.y).normalized;
                         currentDashSpeed = 15f;
                         state = State.Dash;
@@ -155,6 +157,7 @@ public class PlayerMovement : MonoBehaviour
             player.setInvulnerable(false);
 
             state = State.Normal;
+            isDashing = false;
             Invoke("ResetDash", dashCooldown);
             nextDashTimer = Time.time + dashCooldown;
         }
@@ -184,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ResetDash()
     {
-        isDashing = false;
+        //isDashing = false;
         /*animator.Play("Idle");*/
     }
 

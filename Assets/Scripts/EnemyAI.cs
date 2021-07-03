@@ -339,7 +339,7 @@ public class EnemyAI : MonoBehaviour
     {
         float ammoPercentage = Player.GetAmmoCountPercentage();
         float durabilityPercentage = Player.GetSwordDurabilityPercentage();
-        if (ammoPercentage == 0 && durabilityPercentage == 0)
+        if (ammoPercentage == 0 && durabilityPercentage == 0 && InGameUIManager.batteryCount == 0)
         {
             GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
         }

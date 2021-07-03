@@ -21,7 +21,7 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         //SpawnFromAllPoints();
-        if(GameObject.FindGameObjectsWithTag("Player").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
         {
             SpawnPlayer();
         }
@@ -67,6 +67,13 @@ public class RoomManager : MonoBehaviour
         {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
             Instantiate(enemyPrefabs[randEnemy], spawnPoints[i].position, Quaternion.identity);
+        }
+        int stageCleared = Player.stageCleared;
+        for (int i = 0; i < stageCleared; i++)
+        {
+            int randEnemy = Random.Range(0, enemyPrefabs.Length);
+            int randPos = Random.Range(0, spawnPoints.Length);
+            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randPos].position, Quaternion.identity);
         }
     }
 
