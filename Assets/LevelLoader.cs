@@ -6,15 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
-    public float transitionTime = 1f;
-
-    void Update()
-    {
-        /*if (Input.GetButtonDown("Jump"))
-        {
-            LoadNextLevel();
-        }*/
-    }
+    float transitionTime = 0.5f;
 
     public void LoadNextLevel()
     {
@@ -38,5 +30,10 @@ public class LevelLoader : MonoBehaviour
         //yield return new WaitForSeconds(transitionTime);
 
         transition.SetBool("Starting", false);
+    }
+
+    public void LoadMainMenu()
+    {
+        StartCoroutine(LoadLevel(0));
     }
 }

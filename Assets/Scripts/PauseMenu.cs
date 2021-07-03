@@ -42,7 +42,8 @@ public class PauseMenu : MonoBehaviour
     public void ToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
+        levelLoader.LoadMainMenu();
     }
 
     public void QuitGame()
