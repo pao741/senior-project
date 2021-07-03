@@ -359,7 +359,7 @@ public class EnemyAI : MonoBehaviour
     {
         float percent = Player.GetHealth() / Player.GetMaxHealth(); //
         float random = Random.Range(0f, 1f);
-        float dropProbability = 0.6f * (1 - percent); // max drop change of 50% (though max chance can only be achieve by having 0 health)
+        float dropProbability = 0.4f * (1 - percent); // max drop change of 50% (though max chance can only be achieve by having 0 health)
         if (random <= dropProbability)
         {
             GameObject healthPlus = Instantiate(healthPlusPrefab, thisEnemy.position, thisEnemy.rotation);
