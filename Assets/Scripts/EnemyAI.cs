@@ -339,7 +339,7 @@ public class EnemyAI : MonoBehaviour
     {
         float ammoPercentage = Player.GetAmmoCountPercentage();
         float durabilityPercentage = Player.GetSwordDurabilityPercentage();
-        if(ammoPercentage == 0 && durabilityPercentage == 0)
+        if (ammoPercentage == 0 && durabilityPercentage == 0)
         {
             GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
         }
@@ -347,22 +347,26 @@ public class EnemyAI : MonoBehaviour
         {
             float lower = (ammoPercentage < durabilityPercentage) ? ammoPercentage : durabilityPercentage;
             float random = Random.Range(0f, 1f);
-            float dropProbability = 0.35f * (1 - lower); // max drop change of 35% 
+            float dropProbability = (0.35f * ((1 - lower) / (InGameUIManager.batteryCount + 1))); // max drop change of 35% 
             if (random <= dropProbability)
             {
                 GameObject battery = Instantiate(batteryPrefab, thisEnemy.position, thisEnemy.rotation);
             }
         }
+        
     }
 
     void DropHealth()
     {
-        float percent = Player.GetHealth() / Player.GetMaxHealth(); //
-        float random = Random.Range(0f, 1f);
-        float dropProbability = 0.4f * (1 - percent); // max drop change of 50% (though max chance can only be achieve by having 0 health)
-        if (random <= dropProbability)
+        if (InGameUIManager.healthCount == 0)
         {
-            GameObject healthPlus = Instantiate(healthPlusPrefab, thisEnemy.position, thisEnemy.rotation);
+            float percent = Player.GetHealth() / Player.GetMaxHealth(); //
+            float random = Random.Range(0f, 1f);
+            float dropProbability = (0.35f * ((1 - percent) / (InGameUIManager.healthCount + 1))); // max drop change of 50% (though max chance can only be achieve by having 0 health)
+            if (random <= dropProbability)
+            {
+                GameObject healthPlus = Instantiate(healthPlusPrefab, thisEnemy.position, thisEnemy.rotation);
+            }
         }
     }
 

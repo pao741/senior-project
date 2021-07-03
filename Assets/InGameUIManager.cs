@@ -11,6 +11,10 @@ public class InGameUIManager : MonoBehaviour
     static GameObject interactingMessage;
     static TextMeshProUGUI staticActionText;
 
+    public static GameObject[] items;
+    public static int healthCount;
+    public static int batteryCount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +58,7 @@ public class InGameUIManager : MonoBehaviour
 
     public GameObject getItemInRange()
     {
-        GameObject[] items = GameObject.FindGameObjectsWithTag("Interactable");
+        items = GameObject.FindGameObjectsWithTag("Interactable");
         for (int i = 0; i < items.Length; i++)
         {
             Battery currentBattery = items[i].GetComponent<Battery>();
@@ -63,6 +67,7 @@ public class InGameUIManager : MonoBehaviour
 
             if (currentBattery != null)
             {
+                batteryCount++;
                 if (currentBattery.CheckPlayerInRange())
                 {
                     return items[i];
@@ -70,6 +75,7 @@ public class InGameUIManager : MonoBehaviour
             }
             else if (healthPlus != null)
             {
+                healthCount++;
                 if (healthPlus.CheckPlayerInRange())
                 {
                     return items[i];
