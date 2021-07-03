@@ -71,12 +71,14 @@ public class AimHandler : MonoBehaviour
 
     public float GetAmmoCountPercentage()
     {
+        shootingManager = aims[0].GetComponent<Shooting>();
         float gunAmmoPercentage = (float)shootingManager.currentTotalBullet / (float)shootingManager.maxTotalBullet;
         return gunAmmoPercentage;
     }
 
     public float GetSwordDurabilityPercentage()
     {
+        meleeManager = aims[1].GetComponent<PlayerCombatManager>();
         float swordDurabilityPercentage = (float)meleeManager.currentDurability / (float)meleeManager.maxDurability;
         return swordDurabilityPercentage;
     }
