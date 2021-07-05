@@ -37,14 +37,8 @@ public class Player : MonoBehaviour
         meleeManagerGameObject = GameObject.Find("MeleeAim");
         meleeManagerGameObject.SetActive(false);
 
-        Debug.Log(shootingManagerGameObject == null);
-        Debug.Log(meleeManagerGameObject == null);
-
         shootingManager = shootingManagerGameObject.GetComponent<Shooting>();
         meleeManager = meleeManagerGameObject.GetComponent<PlayerCombatManager>();
-        Debug.Log(shootingManager == null);
-        Debug.Log(meleeManager == null);
-
         healthBarObject = GameObject.Find("/Canvas(Clone)/InGameUI/HealthBar/");
         healthBar = healthBarObject.GetComponent<HealthBar>();
         currentHealth = maxHealth;
