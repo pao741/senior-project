@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public CameraShake cameraShake;
     public static bool isDead;
 
-    bool invulnerable = false;
+    static bool invulnerable = false;
     float damageCooldownTimer = 1.35f;
     float nextDamageTime = 0f;
 
@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
     public static Transform playerTransform;
     public static int stageCleared = 0;
     static AimHandler aimHandler;
+
+
+    public static bool isDashing = false;
 
     void Start()
     {
@@ -60,7 +63,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         float timer = 0;
-        if (!invulnerable)
+        if (!invulnerable && !isDashing)
         {
             nextDamageTime = Time.time + damageCooldownTimer;
             currentHealth -= damage;
@@ -84,7 +87,7 @@ public class Player : MonoBehaviour
         //GameObject.Find("/Canvas(Clone)/DeathMenu").SetActive(true);
     }
 
-    public void setInvulnerable(bool cond)
+    public static void SetInvulnerable(bool cond)
     {
         invulnerable = cond;
     }
@@ -171,6 +174,17 @@ public class Player : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public static void SetIntangible(bool cond)
+    {
+        if (cond) {
+            GetGameObject().layer = 12;
+        }
+        else
+        {
+            GetGameObject().layer = 8;
         }
     }
 }

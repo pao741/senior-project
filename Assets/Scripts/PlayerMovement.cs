@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Transform playerGFX;
-    public Player player;
 
     [Space]
     [Header("Dash")]
@@ -93,7 +92,9 @@ public class PlayerMovement : MonoBehaviour
                     if (movement.x != 0 || movement.y != 0)
                     {
                         CinemachineShake.Instance.ShakeCamera(1f, .2f);
-                        player.setInvulnerable(true);
+                        //Player.SetInvulnerable(true);
+                        Player.isDashing = true;
+                        Player.SetIntangible(true);
                         isDashing = true;
                         dashDirection = new Vector2(movement.x, movement.y).normalized;
                         currentDashSpeed = 15f;
@@ -159,8 +160,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentDashSpeed < dashSpeedMinimum)
         {
-            player.setInvulnerable(false);
-
+            //Player.SetInvulnerable(false);
+            Player.isDashing = false;
+            Player.SetIntangible(false);
             state = State.Normal;
             isDashing = false;
             Invoke("ResetDash", dashCooldown);
