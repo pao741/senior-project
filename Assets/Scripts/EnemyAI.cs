@@ -304,8 +304,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            //animator.Play("Enemy1_damaged");
-            animator.SetBool("Damaged", true);
+            //animator.SetBool("Damaged", true);
         }
         takingDamageTimer = Time.time + 1f;
         /*Debug.Log(takingDamageTimer);*/
