@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1951308085
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: -4989417721904287249, guid: 7ad86199a22a43d46a03a05520aeff82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -115,10 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689ccd013ca72004984a0da65bd33418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   rb: {fileID: 6615614522939566700, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   animator: {fileID: 3245110356275944238}
-  cam: {fileID: 5856888892622111773, guid: 69c7a83f0bf86e94ea3b7166b2653a2e, type: 3}
   playerGFX: {fileID: 6615614522939566690, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   player: {fileID: 6615614522939566688, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   dashCooldown: 1

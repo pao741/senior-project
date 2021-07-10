@@ -58,6 +58,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             return;
+        }else if (Player.isDead)
+        {
+            rb.velocity = Vector3.zero;
+            state = State.Normal;
+            return;
         }
         switch (state)
         {

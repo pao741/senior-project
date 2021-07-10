@@ -41,7 +41,7 @@ public class EnemyAI : MonoBehaviour
     bool isRoaming = true;
     bool hasDestination = false;
     bool reachedRoamingPath = false;
-    float roamTimer = 0;
+    public float roamTimer = 0;
     Vector3 roamPosition;
     Vector3 roamDirection;
     Vector3 Headingto;
@@ -59,7 +59,8 @@ public class EnemyAI : MonoBehaviour
         collider = GetComponent<Collider2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        float seconds = Random.Range(1.0f, 8.0f);
+        //float seconds = Random.Range(1.0f, 5.0f);
+        float seconds = 1f;
         roamTimer = Time.time + seconds;
 
         InvokeRepeating("UpdatePath", 0f, .1f);

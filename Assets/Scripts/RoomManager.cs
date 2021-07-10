@@ -13,7 +13,7 @@ public class RoomManager : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public bool roomCleared = false;
 
-    int numWaves = 0;
+    int numWaves = 1;
 
     static bool c = false;
 

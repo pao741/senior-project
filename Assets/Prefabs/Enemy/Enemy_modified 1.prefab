@@ -535,7 +535,7 @@ MonoBehaviour:
     m_Bits: 128
   batteryPrefab: {fileID: 6631194611257781881, guid: 0beef06b50108fa40bf88c0b5994b857, type: 3}
   healthPlusPrefab: {fileID: 6400805266415356278, guid: 700da788cc1b9384a90142f267a1a59a, type: 3}
-  speed: 2000
+  speed: 3000
   nextWayPointDistance: 3
   enemyGFX: {fileID: 1789675195445431617}
   maxHealth: 100
@@ -544,7 +544,8 @@ MonoBehaviour:
   knockbackPower: 100
   knockbackDuration: 1
   disableMovement: 0
-  attackRange: 1.6
+  attackRange: 2
+  roamTimer: 0
 --- !u!50 &1789675195319993146
 Rigidbody2D:
   serializedVersion: 4
@@ -638,7 +639,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117407725
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -971380471989021944, guid: 6f39f21014b21dd429dec7932be5e4f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
