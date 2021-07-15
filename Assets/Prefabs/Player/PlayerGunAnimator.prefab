@@ -115,10 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689ccd013ca72004984a0da65bd33418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 3.5
   rb: {fileID: 6615614522939566700, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   animator: {fileID: 3245110356275944238}
   playerGFX: {fileID: 6615614522939566690, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
-  player: {fileID: 6615614522939566688, guid: 7588f29f64400d84db59fc975e4d9901, type: 3}
   dashCooldown: 1
   dashSpeed: 250

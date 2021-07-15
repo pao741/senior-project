@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  drawGizmos: 1
+  drawGizmos: 0
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
@@ -591,6 +591,7 @@ MonoBehaviour:
   knockbackDuration: 1
   disableMovement: 0
   attackRange: 4
+  roamTimer: 0
 --- !u!58 &8769901451787312819
 CircleCollider2D:
   m_ObjectHideFlags: 0

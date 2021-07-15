@@ -41,4 +41,13 @@ public class DeathMenu : PauseMenu
         //survivedText = GameObject.Find("/Canvas(Clone)/DeathMenu/SurvivedText").GetComponent<TextMeshProUGUI>();
         //survivedText.text = "You survived for " + Player.GetStagedCleared().ToString() + " stage(s)";
     }
+
+    public void ToMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+        LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
+        levelLoader.LoadMainMenu();
+    }
 }

@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e643efd8fb5ab17428ded1145c23e793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 1611632476879698192}
   deathMenu: {fileID: 1611632476738612220}
 --- !u!114 &1611632475707452895
 MonoBehaviour:
@@ -2175,6 +2175,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1611632475707452889}
+    - target: {fileID: 2786812770482303817, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786812770482303817, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2786812770876082168, guid: ed7e8961ce756a041bb74a8d7b656aff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
