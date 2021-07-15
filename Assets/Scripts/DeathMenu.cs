@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class DeathMenu : PauseMenu
+public class DeathMenu : MonoBehaviour
 {
     public GameObject deathMenu;
     static GameObject staticDeathMenu;
@@ -44,9 +44,9 @@ public class DeathMenu : PauseMenu
 
     public void ToMenu()
     {
-        pauseMenuUI.SetActive(false);
+        //pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
+        PauseMenu.isPaused = false;
         LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
         levelLoader.LoadMainMenu();
     }

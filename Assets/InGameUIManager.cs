@@ -28,7 +28,6 @@ public class InGameUIManager : MonoBehaviour
     void Update()
     {
         SetItem();
-        Debug.Log(batteryCount);
         GameObject item = getItemInRange();
         if (item != null)
         {
