@@ -27,6 +27,8 @@ public class InGameUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetItem();
+        Debug.Log(batteryCount);
         GameObject item = getItemInRange();
         if (item != null)
         {
@@ -58,6 +60,8 @@ public class InGameUIManager : MonoBehaviour
 
     public GameObject getItemInRange()
     {
+        int totalBattery = 0;
+        int totalHealth = 0;
         items = GameObject.FindGameObjectsWithTag("Interactable");
         for (int i = 0; i < items.Length; i++)
         {
@@ -67,7 +71,7 @@ public class InGameUIManager : MonoBehaviour
 
             if (currentBattery != null)
             {
-                batteryCount++;
+                totalBattery++;
                 if (currentBattery.CheckPlayerInRange())
                 {
                     return items[i];
@@ -75,7 +79,7 @@ public class InGameUIManager : MonoBehaviour
             }
             else if (healthPlus != null)
             {
-                healthCount++;
+                totalHealth++;
                 if (healthPlus.CheckPlayerInRange())
                 {
                     return items[i];
@@ -91,6 +95,31 @@ public class InGameUIManager : MonoBehaviour
         }
         return null;
     }
+
+    public void SetItem()
+    {
+        int totalBattery = 0;
+        int totalHealth = 0;
+        items = GameObject.FindGameObjectsWithTag("Interactable");
+        for (int i = 0; i < items.Length; i++)
+        {
+            Battery currentBattery = items[i].GetComponent<Battery>();
+            HealthPlus healthPlus = items[i].GetComponent<HealthPlus>();
+
+            if (currentBattery != null)
+            {
+                totalBattery++;
+            }
+            else if (healthPlus != null)
+            {
+                totalHealth++;
+            }
+        }
+
+        batteryCount = totalBattery;
+        healthCount = totalHealth;
+    }
+
 
     public static void SetInteractingMessageActive(bool cond)
     {
