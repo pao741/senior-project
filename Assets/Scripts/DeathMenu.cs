@@ -21,7 +21,6 @@ public class DeathMenu : MonoBehaviour
     {
         LevelLoader levelLoader = GameObject.Find("/Canvas(Clone)/").GetComponent<LevelLoader>();
 
-        //Destroy(GameObject.Find("/Canvas(Clone)/"));
         Destroy(GameObject.Find("/Player(Clone)/"));
 
         staticDeathMenu.SetActive(false);

@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ToMenu()
     {
+        Destroy(GameObject.Find("/Player(Clone)/"));
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
